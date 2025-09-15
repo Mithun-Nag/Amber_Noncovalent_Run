@@ -1,0 +1,130 @@
+
+ REMIND COMPUTATIONAL CONDITIONS FOR P7173:
+ Geometry optimization done using the 'ON' keyword
+ MEP computation done
+ Frequency computation not done!
+ QMSOFT       = GAUSSIAN using the 'Normal' mode
+ CHR_TYP      = RESP-A1
+ Theory level = HF/6-31G(d)//HF/6-31G(d)
+ (Single point MEP computation//Geometry optimization)
+ Surface algo = Connolly surface
+ MEP points   = Default
+
+ The listed dihedral values below can be used to validate the FF generated
+ by PyRED:
+ These values can be compared to values observed during MD simulation
+ Data are sorted by atom types (2 central atoms) and by dihedral values
+
+     Mol_m1-c1-qmra.pdb  &  Mol-sm_m1-c1.mol2
+             Atom_names       Atom_types         Distances(Å)    Dih.angles(°) 
+     1   C9   C10  C11  C12   CA-C -CA-CA     1.387 1.392 1.378     -0.24 
+     2   C11  C10  C9   C8    CA-C -CA-CA     1.388 1.387 1.392      0.24 
+     3   C11  C10  C9   H9    CA-C -CA-HA     1.072 1.387 1.392   -179.39 
+     4   C9   C10  C11  H11   CA-C -CA-HA     1.387 1.392 1.074    179.56 
+     5   O13  C10  C11  C12   OS-C -CA-CA     1.346 1.392 1.378   -179.77 
+     6   O13  C10  C9   C8    OS-C -CA-CA     1.388 1.387 1.346    179.72 
+     7   O13  C10  C11  H11   OS-C -CA-HA     1.346 1.392 1.074      0.04 
+     8   O13  C10  C9   H9    OS-C -CA-HA     1.072 1.387 1.346      0.09 
+     9   N3   C4   C5   C6    NA-C -CT-CT     1.369 1.524 1.538    127.19 
+    10   N3   C4   C5   H5    NA-C -CT-H1     1.369 1.524 1.082   -113.67 
+    11   N3   C4   C5   S1    NA-C -CT-S      1.828 1.524 1.369      1.93 
+    12   O4   C4   C5   C6    O -C -CT-CT     1.188 1.524 1.538    -52.91 
+    13   O4   C4   C5   H5    O -C -CT-H1     1.188 1.524 1.082     66.23 
+    14   O4   C4   C5   S1    O -C -CT-S      1.828 1.524 1.188   -178.17 
+    15   C5   C4   N3   C2    CT-C -NA-C      1.377 1.369 1.524     -1.44 
+    16   C5   C4   N3   HN3   CT-C -NA-H      0.999 1.369 1.524    179.58 
+    17   O2   C2   N3   C4    O -C -NA-C      1.182 1.377 1.369   -179.58 
+    18   O4   C4   N3   C2    O -C -NA-C      1.377 1.369 1.188    178.66 
+    19   O2   C2   N3   HN3   O -C -NA-H      1.182 1.377 0.999     -0.59 
+    20   O4   C4   N3   HN3   O -C -NA-H      0.999 1.369 1.188     -0.32 
+    21   S1   C2   N3   C4    S -C -NA-C      1.775 1.377 1.369      0.17 
+    22   S1   C2   N3   HN3   S -C -NA-H      1.775 1.377 0.999    179.16 
+    23   C11  C10  O13  C14   CA-C -OS-CT     1.392 1.346 1.409   -178.47 
+    24   C9   C10  O13  C14   CA-C -OS-CT     1.387 1.346 1.409      2.03 
+    25   N3   C2   S1   C5    NA-C -S -CT     1.828 1.775 1.377      0.90 
+    26   O2   C2   S1   C5    O -C -S -CT     1.828 1.775 1.182   -179.35 
+    27   C10  C11  C12  H12   C -CA-CA-HA     1.392 1.378 1.076    179.76 
+    28   C7   C12  C11  C10   CA-CA-CA-C      1.394 1.378 1.392     -0.11 
+    29   C7   C8   C9   C10   CA-CA-CA-C      1.385 1.388 1.387      0.12 
+    30   C12  C7   C8   C9    CA-CA-CA-CA     1.394 1.385 1.388     -0.46 
+    31   C19  C20  C21  C22   CA-CA-CA-CA     1.376 1.391 1.373      0.24 
+    32   C8   C7   C12  C11   CA-CA-CA-CA     1.385 1.394 1.378      0.46 
+    33   C7   C12  C11  H11   CA-CA-CA-HA     1.394 1.378 1.074   -179.91 
+    34   C19  C20  C21  H21   CA-CA-CA-HA     1.376 1.391 1.076   -179.76 
+    35   C8   C7   C12  H12   CA-CA-CA-HA     1.385 1.394 1.076   -179.41 
+    36   C12  C7   C8   H8    CA-CA-CA-HA     1.394 1.385 1.077    179.03 
+    37   C7   C8   C9   H9    CA-CA-CA-HA     1.385 1.388 1.072    179.76 
+    38   C20  C21  C22  H22   CA-CA-CA-HA     1.391 1.373 1.071    179.98 
+    39   C17  C22  C21  C20   CM-CA-CA-CA     1.409 1.373 1.391      0.14 
+    40   C17  C22  C21  H21   CM-CA-CA-HA     1.409 1.373 1.076   -179.86 
+    41   C6   C7   C12  C11   CT-CA-CA-CA     1.513 1.394 1.378   -179.29 
+    42   C6   C7   C8   C9    CT-CA-CA-CA     1.513 1.385 1.388    179.29 
+    43   C6   C7   C8   H8    CT-CA-CA-HA     1.513 1.385 1.077     -1.22 
+    44   C6   C7   C12  H12   CT-CA-CA-HA     1.513 1.394 1.076      0.84 
+    45   H19  C19  C20  C21   H4-CA-CA-CA     1.077 1.376 1.391    179.64 
+    46   H19  C19  C20  H20   H4-CA-CA-HA     1.077 1.376 1.073     -0.06 
+    47   H8   C8   C9   C10   HA-CA-CA-C      1.077 1.388 1.387   -179.38 
+    48   H20  C20  C21  C22   HA-CA-CA-CA     1.073 1.391 1.373    179.93 
+    49   H20  C20  C21  H21   HA-CA-CA-HA     1.073 1.391 1.076     -0.07 
+    50   H11  C11  C12  H12   HA-CA-CA-HA     1.074 1.378 1.076     -0.05 
+    51   H21  C21  C22  H22   HA-CA-CA-HA     1.076 1.373 1.071     -0.02 
+    52   H8   C8   C9   H9    HA-CA-CA-HA     1.077 1.388 1.072      0.26 
+    53   N18  C19  C20  C21   NC-CA-CA-CA     1.323 1.376 1.391     -0.08 
+    54   N18  C19  C20  H20   NC-CA-CA-HA     1.323 1.376 1.073   -179.77 
+    55   C21  C22  C17  N16   CA-CA-CM-N2     1.370 1.409 1.373    178.93 
+    56   C21  C22  C17  N18   CA-CA-CM-NC     1.326 1.409 1.373     -0.73 
+    57   H22  C22  C17  N16   HA-CA-CM-N2     1.370 1.409 1.071     -0.90 
+    58   H22  C22  C17  N18   HA-CA-CM-NC     1.326 1.409 1.071    179.43 
+    59   C8   C7   C6   C5    CA-CA-CT-CT     1.538 1.513 1.385    -81.30 
+    60   C12  C7   C6   C5    CA-CA-CT-CT     1.538 1.513 1.394     98.44 
+    61   C12  C7   C6   H61   CA-CA-CT-HC     1.084 1.513 1.394   -142.14 
+    62   C12  C7   C6   H62   CA-CA-CT-HC     1.085 1.513 1.394    -24.07 
+    63   C8   C7   C6   H61   CA-CA-CT-HC     1.084 1.513 1.385     38.12 
+    64   C8   C7   C6   H62   CA-CA-CT-HC     1.085 1.513 1.385    156.19 
+    65   C20  C19  N18  C17   CA-CA-NC-CM     1.326 1.323 1.376     -0.49 
+    66   H19  C19  N18  C17   H4-CA-NC-CM     1.326 1.323 1.077    179.78 
+    67   C22  C17  N16  C16   CA-CM-N2-CT     1.447 1.370 1.409      7.18 
+    68   C22  C17  N16  C15   CA-CM-N2-CT     1.449 1.370 1.409    177.74 
+    69   N18  C17  N16  C16   NC-CM-N2-CT     1.447 1.370 1.326   -173.14 
+    70   N18  C17  N16  C15   NC-CM-N2-CT     1.449 1.370 1.326     -2.58 
+    71   C22  C17  N18  C19   CA-CM-NC-CA     1.409 1.326 1.323      0.90 
+    72   N16  C17  N18  C19   N2-CM-NC-CA     1.370 1.326 1.323   -178.78 
+    73   C4   C5   C6   C7    C -CT-CT-CA     1.524 1.538 1.513    172.99 
+    74   C4   C5   C6   H62   C -CT-CT-HC     1.524 1.538 1.085    -63.84 
+    75   C4   C5   C6   H61   C -CT-CT-HC     1.524 1.538 1.084     51.56 
+    76   H5   C5   C6   C7    H1-CT-CT-CA     1.082 1.538 1.513     55.30 
+    77   H141 C14  C15  H152  H1-CT-CT-H1     1.082 1.519 1.079    -67.00 
+    78   H142 C14  C15  H151  H1-CT-CT-H1     1.087 1.519 1.083    -64.47 
+    79   H142 C14  C15  H152  H1-CT-CT-H1     1.087 1.519 1.079     52.71 
+    80   H141 C14  C15  H151  H1-CT-CT-H1     1.082 1.519 1.083    175.82 
+    81   H5   C5   C6   H61   H1-CT-CT-HC     1.082 1.538 1.084    -66.13 
+    82   H5   C5   C6   H62   H1-CT-CT-HC     1.082 1.538 1.085    178.47 
+    83   H141 C14  C15  N16   H1-CT-CT-N2     1.082 1.519 1.449     54.97 
+    84   H142 C14  C15  N16   H1-CT-CT-N2     1.087 1.519 1.449    174.68 
+    85   O13  C14  C15  H151  OS-CT-CT-H1     1.409 1.519 1.083     55.14 
+    86   O13  C14  C15  H152  OS-CT-CT-H1     1.409 1.519 1.079    172.31 
+    87   O13  C14  C15  N16   OS-CT-CT-N2     1.409 1.519 1.449    -65.72 
+    88   S1   C5   C6   C7    S -CT-CT-CA     1.828 1.538 1.513    -66.33 
+    89   S1   C5   C6   H62   S -CT-CT-HC     1.828 1.538 1.085     56.83 
+    90   S1   C5   C6   H61   S -CT-CT-HC     1.828 1.538 1.084    172.24 
+    91   C14  C15  N16  C17   CT-CT-N2-CM     1.519 1.449 1.370    -81.85 
+    92   C14  C15  N16  C16   CT-CT-N2-CT     1.519 1.449 1.447     88.84 
+    93   H162 C16  N16  C17   H1-CT-N2-CM     1.370 1.447 1.086    -63.04 
+    94   H152 C15  N16  C17   H1-CT-N2-CM     1.079 1.449 1.370     39.66 
+    95   H161 C16  N16  C17   H1-CT-N2-CM     1.370 1.447 1.086     58.83 
+    96   H151 C15  N16  C17   H1-CT-N2-CM     1.083 1.449 1.370    156.89 
+    97   H163 C16  N16  C17   H1-CT-N2-CM     1.370 1.447 1.078    177.83 
+    98   H152 C15  N16  C16   H1-CT-N2-CT     1.079 1.449 1.447   -149.66 
+    99   H161 C16  N16  C15   H1-CT-N2-CT     1.449 1.447 1.086   -111.81 
+   100   H151 C15  N16  C16   H1-CT-N2-CT     1.083 1.449 1.447    -32.43 
+   101   H163 C16  N16  C15   H1-CT-N2-CT     1.449 1.447 1.078      7.19 
+   102   H162 C16  N16  C15   H1-CT-N2-CT     1.449 1.447 1.086    126.32 
+   103   C15  C14  O13  C10   CT-CT-OS-C      1.346 1.409 1.519    177.10 
+   104   H142 C14  O13  C10   H1-CT-OS-C      1.346 1.409 1.087    -63.49 
+   105   H141 C14  O13  C10   H1-CT-OS-C      1.346 1.409 1.082     56.58 
+   106   C4   C5   S1   C2    C -CT-S -C      1.775 1.828 1.524     -1.58 
+   107   C6   C5   S1   C2    CT-CT-S -C      1.775 1.828 1.538   -124.90 
+   108   H5   C5   S1   C2    H1-CT-S -C      1.775 1.828 1.082    112.99 
+ Compute 108 dihedral angles between 44 atoms based on 78 angles and 46 bonds
+
+

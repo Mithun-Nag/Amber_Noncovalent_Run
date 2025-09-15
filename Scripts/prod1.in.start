@@ -1,0 +1,12 @@
+MD explicit solvent heavy atom no rest shake dt 0.004 total is 100 nanoseconds
+ &cntrl
+  imin = 0, nstlim = 25000000, dt=0.004,
+  ntx = 1, irest = 0,
+  ntwx = 2500, ioutfm = 1, ntxo = 2, ntpr = 5000, ntwr = 200000,
+  iwrap = 1, nscm = 1000,
+  ntc = 2, ntf = 2, ntb = 2, cut = 8.0,
+  ntt = 3, ig = -1, gamma_ln = 3, temp0 = 310, tempi = 310,
+  ntp = 1, taup = 2.0, barostat = 2,
+  igb = 0, saltcon = 0.0,
+  ntr = 0,
+ /

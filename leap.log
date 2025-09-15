@@ -1,0 +1,2941 @@
+log started: Mon Sep 15 09:39:45 2025
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the ff14SB force field
+>> # ----- NOTE: this is designed for PDB format 3!
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "H"   "H" "sp3" }
+>> 	{ "HO"  "H" "sp3" }
+>> 	{ "HS"  "H" "sp3" }
+>> 	{ "H1"  "H" "sp3" }
+>> 	{ "H2"  "H" "sp3" }
+>> 	{ "H3"  "H" "sp3" }
+>> 	{ "H4"  "H" "sp3" }
+>> 	{ "H5"  "H" "sp3" }
+>> 	{ "HW"  "H" "sp3" }
+>> 	{ "HC"  "H" "sp3" }
+>> 	{ "HA"  "H" "sp3" }
+>> 	{ "HP"  "H" "sp3" }
+>> 	{ "HZ"  "H" "sp3" }
+>> 	{ "OH"  "O" "sp3" }
+>> 	{ "OS"  "O" "sp3" }
+>> 	{ "O"   "O" "sp2" }
+>> 	{ "O2"  "O" "sp2" }
+>> 	{ "OP"  "O" "sp2" }
+>> 	{ "OW"  "O" "sp3" }
+>> 	{ "CT"  "C" "sp3" }
+>> 	{ "CX"  "C" "sp3" }
+>> 	{ "C8"  "C" "sp3" }
+>> 	{ "2C"  "C" "sp3" }
+>> 	{ "3C"  "C" "sp3" }
+>> 	{ "CH"  "C" "sp3" }
+>> 	{ "CS"  "C" "sp2" }
+>> 	{ "C"   "C" "sp2" }
+>> 	{ "CO"   "C" "sp2" }
+>> 	{ "C*"  "C" "sp2" }
+>> 	{ "CA"  "C" "sp2" }
+>> 	{ "CB"  "C" "sp2" }
+>> 	{ "CC"  "C" "sp2" }
+>> 	{ "CN"  "C" "sp2" }
+>> 	{ "CM"  "C" "sp2" }
+>> 	{ "CK"  "C" "sp2" }
+>> 	{ "CQ"  "C" "sp2" }
+>> 	{ "CD"  "C" "sp2" }
+>> 	{ "C5"  "C" "sp2" }
+>> 	{ "C4"  "C" "sp2" }
+>> 	{ "CP"  "C" "sp2" }
+>> 	{ "CI"  "C" "sp3" }
+>> 	{ "CJ"  "C" "sp2" }
+>> 	{ "CW"  "C" "sp2" }
+>> 	{ "CV"  "C" "sp2" }
+>> 	{ "CR"  "C" "sp2" }
+>> 	{ "CA"  "C" "sp2" }
+>> 	{ "CY"  "C" "sp2" }
+>> 	{ "C0"  "Ca" "sp3" }
+>> 	{ "MG"  "Mg" "sp3" }
+>> 	{ "N"   "N" "sp2" }
+>> 	{ "NA"  "N" "sp2" }
+>> 	{ "N2"  "N" "sp2" }
+>> 	{ "N*"  "N" "sp2" }
+>> 	{ "NP"  "N" "sp2" }
+>> 	{ "NQ"  "N" "sp2" }
+>> 	{ "NB"  "N" "sp2" }
+>> 	{ "NC"  "N" "sp2" }
+>> 	{ "NT"  "N" "sp3" }
+>> 	{ "NY"  "N" "sp2" }
+>> 	{ "N3"  "N" "sp3" }
+>> 	{ "S"   "S" "sp3" }
+>> 	{ "SH"  "S" "sp3" }
+>> 	{ "P"   "P" "sp3" }
+>> 	{ "LP"  ""  "sp3" }
+>> 	{ "EP"  ""  "sp3" }
+>> 	{ "F"   "F" "sp3" }
+>> 	{ "Cl"  "Cl" "sp3" }
+>> 	{ "Br"  "Br" "sp3" }
+>> 	{ "I"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the main parameter set.
+>> #
+>> parm10 = loadamberparams parm10.dat
+Loading parameters: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+>> frcmod14SB = loadamberparams frcmod.ff14SB
+Loading parameters: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/parm/frcmod.ff14SB
+Reading force field modification type file (frcmod)
+Reading title:
+ff14SB protein backbone and sidechain parameters
+>> #
+>> #	Load main chain and terminating amino acid libraries
+>> #
+>> loadOff amino12.lib
+Loading library: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/lib/amino12.lib
+Loading: ALA
+Loading: ARG
+Loading: ASH
+Loading: ASN
+Loading: ASP
+Loading: CYM
+Loading: CYS
+Loading: CYX
+Loading: GLH
+Loading: GLN
+Loading: GLU
+Loading: GLY
+Loading: HID
+Loading: HIE
+Loading: HIP
+Loading: HYP
+Loading: ILE
+Loading: LEU
+Loading: LYN
+Loading: LYS
+Loading: MET
+Loading: PHE
+Loading: PRO
+Loading: SER
+Loading: THR
+Loading: TRP
+Loading: TYR
+Loading: VAL
+>> loadOff aminoct12.lib
+Loading library: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/lib/aminoct12.lib
+Loading: CALA
+Loading: CARG
+Loading: CASN
+Loading: CASP
+Loading: CCYS
+Loading: CCYX
+Loading: CGLN
+Loading: CGLU
+Loading: CGLY
+Loading: CHID
+Loading: CHIE
+Loading: CHIP
+Loading: CHYP
+Loading: CILE
+Loading: CLEU
+Loading: CLYS
+Loading: CMET
+Loading: CPHE
+Loading: CPRO
+Loading: CSER
+Loading: CTHR
+Loading: CTRP
+Loading: CTYR
+Loading: CVAL
+Loading: NHE
+Loading: NME
+>> loadOff aminont12.lib
+Loading library: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/lib/aminont12.lib
+Loading: ACE
+Loading: NALA
+Loading: NARG
+Loading: NASN
+Loading: NASP
+Loading: NCYS
+Loading: NCYX
+Loading: NGLN
+Loading: NGLU
+Loading: NGLY
+Loading: NHID
+Loading: NHIE
+Loading: NHIP
+Loading: NILE
+Loading: NLEU
+Loading: NLYS
+Loading: NMET
+Loading: NPHE
+Loading: NPRO
+Loading: NSER
+Loading: NTHR
+Loading: NTRP
+Loading: NTYR
+Loading: NVAL
+>> 
+>> #
+>> #	Define the PDB name map for the amino acids
+>> #
+>> addPdbResMap {
+>>   { 0 "HYP" "HYP" } { 1 "HYP" "CHYP" }
+>>   { 0 "ALA" "NALA" } { 1 "ALA" "CALA" }
+>>   { 0 "ARG" "NARG" } { 1 "ARG" "CARG" }
+>>   { 0 "ASN" "NASN" } { 1 "ASN" "CASN" }
+>>   { 0 "ASP" "NASP" } { 1 "ASP" "CASP" }
+>>   { 0 "CYS" "NCYS" } { 1 "CYS" "CCYS" }
+>>   { 0 "CYX" "NCYX" } { 1 "CYX" "CCYX" }
+>>   { 0 "GLN" "NGLN" } { 1 "GLN" "CGLN" }
+>>   { 0 "GLU" "NGLU" } { 1 "GLU" "CGLU" }
+>>   { 0 "GLY" "NGLY" } { 1 "GLY" "CGLY" }
+>>   { 0 "HID" "NHID" } { 1 "HID" "CHID" }
+>>   { 0 "HIE" "NHIE" } { 1 "HIE" "CHIE" }
+>>   { 0 "HIP" "NHIP" } { 1 "HIP" "CHIP" }
+>>   { 0 "ILE" "NILE" } { 1 "ILE" "CILE" }
+>>   { 0 "LEU" "NLEU" } { 1 "LEU" "CLEU" }
+>>   { 0 "LYS" "NLYS" } { 1 "LYS" "CLYS" }
+>>   { 0 "MET" "NMET" } { 1 "MET" "CMET" }
+>>   { 0 "PHE" "NPHE" } { 1 "PHE" "CPHE" }
+>>   { 0 "PRO" "NPRO" } { 1 "PRO" "CPRO" }
+>>   { 0 "SER" "NSER" } { 1 "SER" "CSER" }
+>>   { 0 "THR" "NTHR" } { 1 "THR" "CTHR" }
+>>   { 0 "TRP" "NTRP" } { 1 "TRP" "CTRP" }
+>>   { 0 "TYR" "NTYR" } { 1 "TYR" "CTYR" }
+>>   { 0 "VAL" "NVAL" } { 1 "VAL" "CVAL" }
+>>   { 0 "HIS" "NHIS" } { 1 "HIS" "CHIS" }
+>> }
+>> 
+>> #
+>> # assume that most often proteins use HIE
+>> #
+>> NHIS = NHIE
+>> HIS = HIE
+>> CHIS = CHIE
+> 
+> source leaprc.gaff
+----- Source: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/cmd/leaprc.gaff
+----- Source of /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/cmd/leaprc.gaff done
+>> logFile leap.log
+log started: Mon Sep 15 09:39:45 2025
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "op"  "O" "sp3" }
+>> 	{ "oq"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "ni"  "N" "sp2" }
+>> 	{ "nj"  "N" "sp2" }
+>> 	{ "nk"  "N" "sp3" }
+>> 	{ "nl"  "N" "sp3" }
+>> 	{ "nm"  "N" "sp2" }
+>> 	{ "nn"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "np"  "N" "sp3" }
+>> 	{ "nq"  "N" "sp3" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "sp"   "S" "sp3" }
+>> 	{ "sq"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff.dat
+Loading parameters: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.81, May 2017)
+> 
+> source leaprc.water.tip3p
+----- Source: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/cmd/leaprc.water.tip3p
+----- Source of /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/cmd/leaprc.water.tip3p done
+>> #
+>> #       Load water and ions for TIP3P + Li/Merz monovalent ions 
+>> #       + Joung-Chetham monovalent ions
+>> #       + Li/Merz highly charged ions (+2 to +4, 12-6 normal usage set)
+>> #
+>> #       Note: the Li/Merz monovalent set is loaded only to get Tl+,
+>> #          Cu+, Ag+ NH4+, H3O+.  Since we load Joung-Cheatham second,
+>> #          the alkali halide parameters come from the Joung-Cheatham set
+>> #
+>> addAtomTypes {
+>> 	{ "HW"  "H" "sp3" }
+>> 	{ "OW"  "O" "sp3" }
+>> 	{ "F-"   "F" "sp3" }
+>> 	{ "Cl-"  "Cl" "sp3" }
+>> 	{ "Br-"  "Br" "sp3" }
+>> 	{ "I-"   "I"  "sp3" }
+>> 	{ "Li+"  "Li"  "sp3" }
+>> 	{ "Na+"  "Na"  "sp3" }
+>> 	{ "K+"  "K"  "sp3" }
+>> 	{ "Rb+"  "Rb"  "sp3" }
+>> 	{ "Cs+"  "Cs"  "sp3" }
+>> 	{ "Mg+"  "Mg"  "sp3" }
+>>     { "Tl+"  "Tl"  "sp3" }
+>>     { "Cu+"  "Cu"  "sp3" }
+>>     { "Ag+"  "Ag"  "sp3" }
+>>     { "NH4+"  "N"  "sp3" }
+>>     { "H3O+"  "O"  "sp3" }
+>>     { "Be2+" "Be"  "sp3" }
+>>     { "Cu2+" "Cu"  "sp3" }
+>>     { "Ni2+" "Ni"  "sp3" }
+>>     { "Pt2+" "Pt"  "sp3" }
+>>     { "Zn2+" "Zn"  "sp3" }
+>>     { "Co2+" "Co"  "sp3" }
+>>     { "Pd2+" "Pd"  "sp3" }
+>>     { "Ag2+" "Ag"  "sp3" }
+>>     { "Cr2+" "Cr"  "sp3" }
+>>     { "Fe2+" "Fe"  "sp3" }
+>>     { "Mg2+" "Mg"  "sp3" }
+>>     { "V2+"  "V"   "sp3" }
+>>     { "Mn2+" "Mn"  "sp3" }
+>>     { "Hg2+" "Hg"  "sp3" }
+>>     { "Cd2+" "Cd"  "sp3" }
+>>     { "Yb2+" "Yb"  "sp3" }
+>>     { "Ca2+" "Ca"  "sp3" }
+>>     { "Sn2+" "Sn"  "sp3" }
+>>     { "Pb2+" "Pb"  "sp3" }
+>>     { "Eu2+" "Eu"  "sp3" }
+>>     { "Sr2+" "Sr"  "sp3" }
+>>     { "Sm2+" "Sm"  "sp3" }
+>>     { "Ba2+" "Ba"  "sp3" }
+>>     { "Ra2+" "Ra"  "sp3" }
+>>     { "Al3+" "Al"  "sp3" }
+>>     { "Fe3+" "Fe"  "sp3" }
+>>     { "Cr3+" "Cr"  "sp3" }
+>>     { "In3+" "In"  "sp3" }
+>>     { "Tl3+" "Tl"  "sp3" }
+>>     { "Y3+"  "Y"   "sp3" }
+>>     { "La3+" "La"  "sp3" }
+>>     { "Ce3+" "Ce"  "sp3" }
+>>     { "Pr3+" "Pr"  "sp3" }
+>>     { "Nd3+" "Nd"  "sp3" }
+>>     { "Sm3+" "Sm"  "sp3" }
+>>     { "Eu3+" "Eu"  "sp3" }
+>>     { "Gd3+" "Gd"  "sp3" }
+>>     { "Tb3+" "Tb"  "sp3" }
+>>     { "Dy3+" "Dy"  "sp3" }
+>>     { "Er3+" "Er"  "sp3" }
+>>     { "Tm3+" "Tm"  "sp3" }
+>>     { "Lu3+" "Lu"  "sp3" }
+>>     { "Hf4+" "Hf"  "sp3" }
+>>     { "Zr4+" "Zr"  "sp3" }
+>>     { "Ce4+" "Ce"  "sp3" }
+>>     { "U4+"  "U"   "sp3" }
+>>     { "Pu4+" "Pu"  "sp3" }
+>>     { "Th4+" "Th"  "sp3" }
+>> }
+>> loadOff atomic_ions.lib
+Loading library: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/lib/atomic_ions.lib
+Loading: AG
+Loading: AL
+Loading: Ag
+Loading: BA
+Loading: BR
+Loading: Be
+Loading: CA
+Loading: CD
+Loading: CE
+Loading: CL
+Loading: CO
+Loading: CR
+Loading: CS
+Loading: CU
+Loading: CU1
+Loading: Ce
+Loading: Cl-
+Loading: Cr
+Loading: Dy
+Loading: EU
+Loading: EU3
+Loading: Er
+Loading: F
+Loading: FE
+Loading: FE2
+Loading: GD3
+Loading: H3O+
+Loading: HE+
+Loading: HG
+Loading: HZ+
+Loading: Hf
+Loading: IN
+Loading: IOD
+Loading: K
+Loading: K+
+Loading: LA
+Loading: LI
+Loading: LU
+Loading: MG
+Loading: MN
+Loading: NA
+Loading: NH4
+Loading: NI
+Loading: Na+
+Loading: Nd
+Loading: PB
+Loading: PD
+Loading: PR
+Loading: PT
+Loading: Pu
+Loading: RB
+Loading: Ra
+Loading: SM
+Loading: SR
+Loading: Sm
+Loading: Sn
+Loading: TB
+Loading: TL
+Loading: Th
+Loading: Tl
+Loading: Tm
+Loading: U4+
+Loading: V2+
+Loading: Y
+Loading: YB2
+Loading: ZN
+Loading: Zr
+>> loadOff solvents.lib
+Loading library: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/lib/solvents.lib
+Loading: CHCL3BOX
+Loading: DC4
+Loading: FB3
+Loading: FB3BOX
+Loading: FB4
+Loading: FB4BOX
+Loading: MEOHBOX
+Loading: NMABOX
+Loading: O3P
+Loading: OP3
+Loading: OPC
+Loading: OPC3BOX
+Loading: OPC3POLBOX
+Loading: OPCBOX
+Loading: PL3
+Loading: POL3BOX
+Loading: QSPCFWBOX
+Loading: SPC
+Loading: SPCBOX
+Loading: SPCFWBOX
+Loading: SPF
+Loading: SPG
+Loading: T4E
+Loading: TIP3PBOX
+Loading: TIP3PFBOX
+Loading: TIP4PBOX
+Loading: TIP4PEWBOX
+Loading: TIP5PBOX
+Loading: TP3
+Loading: TP4
+Loading: TP5
+Loading: TPF
+>> HOH = TP3
+>> WAT = TP3
+>> loadAmberParams frcmod.tip3p
+Loading parameters: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/parm/frcmod.tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+This is the additional/replacement parameter set for TIP3P water
+>> loadAmberParams frcmod.ions1lm_126_tip3p
+Loading parameters: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/parm/frcmod.ions1lm_126_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of monovalent ions for TIP3P water model (12-6 normal usage set)
+>> loadAmberParams frcmod.ionsjc_tip3p
+Loading parameters: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/parm/frcmod.ionsjc_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and TIP3P water from Joung & Cheatham JPCB (2008)
+>> loadAmberParams frcmod.ions234lm_126_tip3p
+Loading parameters: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/parm/frcmod.ions234lm_126_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of divalent to tetravalent ions for TIP3P water model (12-6 normal usage set)
+>> 
+> 
+> 
+> loadamberprep ligand_forcefields/BRL.prepin
+Loading Prep file: ./ligand_forcefields/BRL.prepin
+Loaded UNIT: MOL
+> loadamberparams ligand_forcefields/BRL.frcmod
+Loading parameters: ./ligand_forcefields/BRL.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+> complex = loadPdb 6ONJ_BRL_complex.pdb
+Loading PDB file: ./6ONJ_BRL_complex.pdb
+ (starting new molecule for chain  )
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Warning!
+Name change in pdb file residue 1 ;
+this residue is split into BRL and GLN.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Note.
+1 residues had naming warnings.
+Thus, there are split residues;
+residue sequence numbers will not correspond to those in the pdb.
+Matching PDB residue names to LEaP variables.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Warning!
+Unknown residue: BRL   number: 0   type: Terminal/last
+..relaxing end constraints to try for a dbase match
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Warning!
+  -no luck
+Mapped residue GLN, term: Terminal/beginning, seq. number: 1 to: NGLN.
+Mapped residue TYR, term: Terminal/last, seq. number: 275 to: CTYR.
+Creating new UNIT for residue: BRL sequence: 1
+Created a new atom named: S1 within residue: .R<BRL 1>
+Created a new atom named: C2 within residue: .R<BRL 1>
+Created a new atom named: O2 within residue: .R<BRL 1>
+Created a new atom named: N3 within residue: .R<BRL 1>
+Created a new atom named: C4 within residue: .R<BRL 1>
+Created a new atom named: O4 within residue: .R<BRL 1>
+Created a new atom named: C5 within residue: .R<BRL 1>
+Created a new atom named: C6 within residue: .R<BRL 1>
+Created a new atom named: C7 within residue: .R<BRL 1>
+Created a new atom named: C8 within residue: .R<BRL 1>
+Created a new atom named: C9 within residue: .R<BRL 1>
+Created a new atom named: C10 within residue: .R<BRL 1>
+Created a new atom named: C11 within residue: .R<BRL 1>
+Created a new atom named: C12 within residue: .R<BRL 1>
+Created a new atom named: O13 within residue: .R<BRL 1>
+Created a new atom named: C14 within residue: .R<BRL 1>
+Created a new atom named: C15 within residue: .R<BRL 1>
+Created a new atom named: C16 within residue: .R<BRL 1>
+Created a new atom named: N16 within residue: .R<BRL 1>
+Created a new atom named: C17 within residue: .R<BRL 1>
+Created a new atom named: N18 within residue: .R<BRL 1>
+Created a new atom named: C19 within residue: .R<BRL 1>
+Created a new atom named: C20 within residue: .R<BRL 1>
+Created a new atom named: C21 within residue: .R<BRL 1>
+Created a new atom named: C22 within residue: .R<BRL 1>
+Created a new atom named: HN3 within residue: .R<BRL 1>
+Created a new atom named: H5 within residue: .R<BRL 1>
+Created a new atom named: H8 within residue: .R<BRL 1>
+Created a new atom named: H9 within residue: .R<BRL 1>
+Created a new atom named: H11 within residue: .R<BRL 1>
+Created a new atom named: H12 within residue: .R<BRL 1>
+Created a new atom named: H19 within residue: .R<BRL 1>
+Created a new atom named: H20 within residue: .R<BRL 1>
+Created a new atom named: H21 within residue: .R<BRL 1>
+Created a new atom named: H22 within residue: .R<BRL 1>
+Created a new atom named: H61 within residue: .R<BRL 1>
+Created a new atom named: H62 within residue: .R<BRL 1>
+Created a new atom named: H141 within residue: .R<BRL 1>
+Created a new atom named: H142 within residue: .R<BRL 1>
+Created a new atom named: H151 within residue: .R<BRL 1>
+Created a new atom named: H152 within residue: .R<BRL 1>
+Created a new atom named: H161 within residue: .R<BRL 1>
+Created a new atom named: H162 within residue: .R<BRL 1>
+Created a new atom named: H163 within residue: .R<BRL 1>
+  total atoms in file: 4531
+  The file contained 44 atoms not in residue templates
+> 
+> check complex
+Checking 'complex'....
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Warning!
+The unperturbed charge of the unit (-4.000000) is not zero.
+FATAL:  Atom .R<BRL 1>.A<S1 1> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<C2 2> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<O2 3> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<N3 4> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<C4 5> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<O4 6> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<C5 7> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<C6 8> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<C7 9> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<C8 10> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<C9 11> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<C10 12> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<C11 13> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<C12 14> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<O13 15> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<C14 16> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<C15 17> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<C16 18> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<N16 19> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<C17 20> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<N18 21> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<C19 22> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<C20 23> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<C21 24> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<C22 25> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<HN3 26> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<H5 27> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<H8 28> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<H9 29> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<H11 30> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<H12 31> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<H19 32> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<H20 33> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<H21 34> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<H22 35> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<H61 36> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<H62 37> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<H141 38> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<H142 39> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<H151 40> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<H152 41> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<H161 42> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<H162 43> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<H163 44> does not have a type.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Warning!
+Close contact of 1.393 angstroms between nonbonded atoms HG23 and H
+-------  .R<THR 148>.A<HG23 10> and .R<PHE 151>.A<H 2>
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Warning!
+Close contact of 1.358 angstroms between nonbonded atoms HB3 and HB2
+-------  .R<LYS 157>.A<HB3 7> and .R<LYS 157>.A<HB2 6>
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Warning!
+Close contact of 1.392 angstroms between nonbonded atoms OD1 and HG
+-------  .R<ASP 179>.A<OD1 9> and .R<SER 181>.A<HG 9>
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Warning!
+Close contact of 1.463 angstroms between nonbonded atoms HB3 and HB2
+-------  .R<GLU 259>.A<HB3 7> and .R<GLU 259>.A<HB2 6>
+Checking parameters for unit 'complex'.
+Checking for bond parameters.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom S1 at position 21.518000, 192.506000, 13.135000 
+        and atom C2 at position 20.693000, 193.175000, 14.360000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom S1 at position 21.518000, 192.506000, 13.135000 
+        and atom C5 at position 20.836000, 190.982000, 12.908000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C2 at position 20.693000, 193.175000, 14.360000 
+        and atom O2 at position 20.929000, 194.213000, 14.878000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C2 at position 20.693000, 193.175000, 14.360000 
+        and atom N3 at position 19.503000, 192.256000, 14.753000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom N3 at position 19.503000, 192.256000, 14.753000 
+        and atom C4 at position 19.544000, 190.932000, 13.871000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom N3 at position 19.503000, 192.256000, 14.753000 
+        and atom HN3 at position 18.914000, 192.436000, 15.354000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C4 at position 19.544000, 190.932000, 13.871000 
+        and atom O4 at position 18.758000, 190.048000, 13.934000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C4 at position 19.544000, 190.932000, 13.871000 
+        and atom C5 at position 20.836000, 190.982000, 12.908000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C5 at position 20.836000, 190.982000, 12.908000 
+        and atom C6 at position 21.765000, 189.866000, 13.368000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C5 at position 20.836000, 190.982000, 12.908000 
+        and atom H5 at position 20.643000, 190.854000, 11.966000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C6 at position 21.765000, 189.866000, 13.368000 
+        and atom C7 at position 22.899000, 189.568000, 12.376000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C6 at position 21.765000, 189.866000, 13.368000 
+        and atom H61 at position 21.245000, 189.059000, 13.508000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C6 at position 21.765000, 189.866000, 13.368000 
+        and atom H62 at position 22.149000, 190.108000, 14.226000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C7 at position 22.899000, 189.568000, 12.376000 
+        and atom C8 at position 22.686000, 188.737000, 11.290000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C7 at position 22.899000, 189.568000, 12.376000 
+        and atom C12 at position 24.144000, 190.125000, 12.582000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C8 at position 22.686000, 188.737000, 11.290000 
+        and atom C9 at position 23.718000, 188.465000, 10.403000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C8 at position 22.686000, 188.737000, 11.290000 
+        and atom H8 at position 21.811000, 188.342000, 11.149000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C9 at position 23.718000, 188.465000, 10.403000 
+        and atom C10 at position 24.965000, 189.033000, 10.623000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C9 at position 23.718000, 188.465000, 10.403000 
+        and atom H9 at position 23.570000, 187.886000, 9.639000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C10 at position 24.965000, 189.033000, 10.623000 
+        and atom C11 at position 25.186000, 189.850000, 11.709000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C10 at position 24.965000, 189.033000, 10.623000 
+        and atom O13 at position 26.017000, 188.798000, 9.753000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C11 at position 25.186000, 189.850000, 11.709000 
+        and atom C12 at position 24.144000, 190.125000, 12.582000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C11 at position 25.186000, 189.850000, 11.709000 
+        and atom H11 at position 26.065000, 190.231000, 11.863000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C12 at position 24.144000, 190.125000, 12.582000 
+        and atom H12 at position 24.292000, 190.711000, 13.340000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom O13 at position 26.017000, 188.798000, 9.753000 
+        and atom C14 at position 25.699000, 188.294000, 8.495000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C14 at position 25.699000, 188.294000, 8.495000 
+        and atom C15 at position 26.954000, 188.428000, 7.614000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C14 at position 25.699000, 188.294000, 8.495000 
+        and atom H141 at position 24.956000, 188.784000, 8.109000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C14 at position 25.699000, 188.294000, 8.495000 
+        and atom H142 at position 25.423000, 187.366000, 8.558000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C15 at position 26.954000, 188.428000, 7.614000 
+        and atom N16 at position 27.312000, 189.839000, 7.509000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C15 at position 26.954000, 188.428000, 7.614000 
+        and atom H151 at position 27.688000, 187.924000, 7.997000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C15 at position 26.954000, 188.428000, 7.614000 
+        and atom H152 at position 26.786000, 188.059000, 6.732000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C16 at position 28.324000, 190.409000, 8.364000 
+        and atom N16 at position 27.312000, 189.839000, 7.509000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C16 at position 28.324000, 190.409000, 8.364000 
+        and atom H161 at position 28.430000, 191.351000, 8.157000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C16 at position 28.324000, 190.409000, 8.364000 
+        and atom H162 at position 29.167000, 189.950000, 8.219000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C16 at position 28.324000, 190.409000, 8.364000 
+        and atom H163 at position 28.058000, 190.311000, 9.291000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom N16 at position 27.312000, 189.839000, 7.509000 
+        and atom C17 at position 26.628000, 190.692000, 6.542000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C17 at position 26.628000, 190.692000, 6.542000 
+        and atom N18 at position 25.666000, 190.167000, 5.754000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C17 at position 26.628000, 190.692000, 6.542000 
+        and atom C22 at position 26.951000, 192.032000, 6.419000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom N18 at position 25.666000, 190.167000, 5.754000 
+        and atom C19 at position 25.010000, 190.927000, 4.846000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C19 at position 25.010000, 190.927000, 4.846000 
+        and atom C20 at position 25.329000, 192.262000, 4.727000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C19 at position 25.010000, 190.927000, 4.846000 
+        and atom H19 at position 24.322000, 190.536000, 4.284000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C20 at position 25.329000, 192.262000, 4.727000 
+        and atom C21 at position 26.293000, 192.793000, 5.512000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C20 at position 25.329000, 192.262000, 4.727000 
+        and atom H20 at position 24.864000, 192.818000, 4.082000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C21 at position 26.293000, 192.793000, 5.512000 
+        and atom C22 at position 26.951000, 192.032000, 6.419000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C21 at position 26.293000, 192.793000, 5.512000 
+        and atom H21 at position 26.516000, 193.733000, 5.424000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find bond parameter for atom types:  - 
+        for atom C22 at position 26.951000, 192.032000, 6.419000 
+        and atom H22 at position 27.642000, 192.422000, 6.977000.
+Checking for angle parameters.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom S1 at position 21.518000, 192.506000, 13.135000,
+            atom C2 at position 20.693000, 193.175000, 14.360000,
+        and atom O2 at position 20.929000, 194.213000, 14.878000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom S1 at position 21.518000, 192.506000, 13.135000,
+            atom C2 at position 20.693000, 193.175000, 14.360000,
+        and atom N3 at position 19.503000, 192.256000, 14.753000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom S1 at position 21.518000, 192.506000, 13.135000,
+            atom C5 at position 20.836000, 190.982000, 12.908000,
+        and atom C4 at position 19.544000, 190.932000, 13.871000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom S1 at position 21.518000, 192.506000, 13.135000,
+            atom C5 at position 20.836000, 190.982000, 12.908000,
+        and atom C6 at position 21.765000, 189.866000, 13.368000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom S1 at position 21.518000, 192.506000, 13.135000,
+            atom C5 at position 20.836000, 190.982000, 12.908000,
+        and atom H5 at position 20.643000, 190.854000, 11.966000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C2 at position 20.693000, 193.175000, 14.360000,
+            atom S1 at position 21.518000, 192.506000, 13.135000,
+        and atom C5 at position 20.836000, 190.982000, 12.908000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C2 at position 20.693000, 193.175000, 14.360000,
+            atom N3 at position 19.503000, 192.256000, 14.753000,
+        and atom C4 at position 19.544000, 190.932000, 13.871000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C2 at position 20.693000, 193.175000, 14.360000,
+            atom N3 at position 19.503000, 192.256000, 14.753000,
+        and atom HN3 at position 18.914000, 192.436000, 15.354000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom O2 at position 20.929000, 194.213000, 14.878000,
+            atom C2 at position 20.693000, 193.175000, 14.360000,
+        and atom N3 at position 19.503000, 192.256000, 14.753000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom N3 at position 19.503000, 192.256000, 14.753000,
+            atom C4 at position 19.544000, 190.932000, 13.871000,
+        and atom O4 at position 18.758000, 190.048000, 13.934000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom N3 at position 19.503000, 192.256000, 14.753000,
+            atom C4 at position 19.544000, 190.932000, 13.871000,
+        and atom C5 at position 20.836000, 190.982000, 12.908000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C4 at position 19.544000, 190.932000, 13.871000,
+            atom N3 at position 19.503000, 192.256000, 14.753000,
+        and atom HN3 at position 18.914000, 192.436000, 15.354000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C4 at position 19.544000, 190.932000, 13.871000,
+            atom C5 at position 20.836000, 190.982000, 12.908000,
+        and atom C6 at position 21.765000, 189.866000, 13.368000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C4 at position 19.544000, 190.932000, 13.871000,
+            atom C5 at position 20.836000, 190.982000, 12.908000,
+        and atom H5 at position 20.643000, 190.854000, 11.966000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom O4 at position 18.758000, 190.048000, 13.934000,
+            atom C4 at position 19.544000, 190.932000, 13.871000,
+        and atom C5 at position 20.836000, 190.982000, 12.908000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C5 at position 20.836000, 190.982000, 12.908000,
+            atom C6 at position 21.765000, 189.866000, 13.368000,
+        and atom C7 at position 22.899000, 189.568000, 12.376000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C5 at position 20.836000, 190.982000, 12.908000,
+            atom C6 at position 21.765000, 189.866000, 13.368000,
+        and atom H61 at position 21.245000, 189.059000, 13.508000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C5 at position 20.836000, 190.982000, 12.908000,
+            atom C6 at position 21.765000, 189.866000, 13.368000,
+        and atom H62 at position 22.149000, 190.108000, 14.226000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C6 at position 21.765000, 189.866000, 13.368000,
+            atom C5 at position 20.836000, 190.982000, 12.908000,
+        and atom H5 at position 20.643000, 190.854000, 11.966000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C6 at position 21.765000, 189.866000, 13.368000,
+            atom C7 at position 22.899000, 189.568000, 12.376000,
+        and atom C8 at position 22.686000, 188.737000, 11.290000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C6 at position 21.765000, 189.866000, 13.368000,
+            atom C7 at position 22.899000, 189.568000, 12.376000,
+        and atom C12 at position 24.144000, 190.125000, 12.582000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C7 at position 22.899000, 189.568000, 12.376000,
+            atom C6 at position 21.765000, 189.866000, 13.368000,
+        and atom H61 at position 21.245000, 189.059000, 13.508000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C7 at position 22.899000, 189.568000, 12.376000,
+            atom C6 at position 21.765000, 189.866000, 13.368000,
+        and atom H62 at position 22.149000, 190.108000, 14.226000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C7 at position 22.899000, 189.568000, 12.376000,
+            atom C8 at position 22.686000, 188.737000, 11.290000,
+        and atom C9 at position 23.718000, 188.465000, 10.403000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C7 at position 22.899000, 189.568000, 12.376000,
+            atom C8 at position 22.686000, 188.737000, 11.290000,
+        and atom H8 at position 21.811000, 188.342000, 11.149000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C7 at position 22.899000, 189.568000, 12.376000,
+            atom C12 at position 24.144000, 190.125000, 12.582000,
+        and atom C11 at position 25.186000, 189.850000, 11.709000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C7 at position 22.899000, 189.568000, 12.376000,
+            atom C12 at position 24.144000, 190.125000, 12.582000,
+        and atom H12 at position 24.292000, 190.711000, 13.340000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C8 at position 22.686000, 188.737000, 11.290000,
+            atom C7 at position 22.899000, 189.568000, 12.376000,
+        and atom C12 at position 24.144000, 190.125000, 12.582000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C8 at position 22.686000, 188.737000, 11.290000,
+            atom C9 at position 23.718000, 188.465000, 10.403000,
+        and atom C10 at position 24.965000, 189.033000, 10.623000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C8 at position 22.686000, 188.737000, 11.290000,
+            atom C9 at position 23.718000, 188.465000, 10.403000,
+        and atom H9 at position 23.570000, 187.886000, 9.639000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C9 at position 23.718000, 188.465000, 10.403000,
+            atom C8 at position 22.686000, 188.737000, 11.290000,
+        and atom H8 at position 21.811000, 188.342000, 11.149000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C9 at position 23.718000, 188.465000, 10.403000,
+            atom C10 at position 24.965000, 189.033000, 10.623000,
+        and atom C11 at position 25.186000, 189.850000, 11.709000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C9 at position 23.718000, 188.465000, 10.403000,
+            atom C10 at position 24.965000, 189.033000, 10.623000,
+        and atom O13 at position 26.017000, 188.798000, 9.753000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C10 at position 24.965000, 189.033000, 10.623000,
+            atom C9 at position 23.718000, 188.465000, 10.403000,
+        and atom H9 at position 23.570000, 187.886000, 9.639000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C10 at position 24.965000, 189.033000, 10.623000,
+            atom C11 at position 25.186000, 189.850000, 11.709000,
+        and atom C12 at position 24.144000, 190.125000, 12.582000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C10 at position 24.965000, 189.033000, 10.623000,
+            atom C11 at position 25.186000, 189.850000, 11.709000,
+        and atom H11 at position 26.065000, 190.231000, 11.863000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C10 at position 24.965000, 189.033000, 10.623000,
+            atom O13 at position 26.017000, 188.798000, 9.753000,
+        and atom C14 at position 25.699000, 188.294000, 8.495000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C11 at position 25.186000, 189.850000, 11.709000,
+            atom C10 at position 24.965000, 189.033000, 10.623000,
+        and atom O13 at position 26.017000, 188.798000, 9.753000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C11 at position 25.186000, 189.850000, 11.709000,
+            atom C12 at position 24.144000, 190.125000, 12.582000,
+        and atom H12 at position 24.292000, 190.711000, 13.340000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C12 at position 24.144000, 190.125000, 12.582000,
+            atom C11 at position 25.186000, 189.850000, 11.709000,
+        and atom H11 at position 26.065000, 190.231000, 11.863000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom O13 at position 26.017000, 188.798000, 9.753000,
+            atom C14 at position 25.699000, 188.294000, 8.495000,
+        and atom C15 at position 26.954000, 188.428000, 7.614000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom O13 at position 26.017000, 188.798000, 9.753000,
+            atom C14 at position 25.699000, 188.294000, 8.495000,
+        and atom H141 at position 24.956000, 188.784000, 8.109000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom O13 at position 26.017000, 188.798000, 9.753000,
+            atom C14 at position 25.699000, 188.294000, 8.495000,
+        and atom H142 at position 25.423000, 187.366000, 8.558000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C14 at position 25.699000, 188.294000, 8.495000,
+            atom C15 at position 26.954000, 188.428000, 7.614000,
+        and atom N16 at position 27.312000, 189.839000, 7.509000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C14 at position 25.699000, 188.294000, 8.495000,
+            atom C15 at position 26.954000, 188.428000, 7.614000,
+        and atom H151 at position 27.688000, 187.924000, 7.997000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C14 at position 25.699000, 188.294000, 8.495000,
+            atom C15 at position 26.954000, 188.428000, 7.614000,
+        and atom H152 at position 26.786000, 188.059000, 6.732000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C15 at position 26.954000, 188.428000, 7.614000,
+            atom C14 at position 25.699000, 188.294000, 8.495000,
+        and atom H141 at position 24.956000, 188.784000, 8.109000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C15 at position 26.954000, 188.428000, 7.614000,
+            atom C14 at position 25.699000, 188.294000, 8.495000,
+        and atom H142 at position 25.423000, 187.366000, 8.558000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C15 at position 26.954000, 188.428000, 7.614000,
+            atom N16 at position 27.312000, 189.839000, 7.509000,
+        and atom C16 at position 28.324000, 190.409000, 8.364000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C15 at position 26.954000, 188.428000, 7.614000,
+            atom N16 at position 27.312000, 189.839000, 7.509000,
+        and atom C17 at position 26.628000, 190.692000, 6.542000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C16 at position 28.324000, 190.409000, 8.364000,
+            atom N16 at position 27.312000, 189.839000, 7.509000,
+        and atom C17 at position 26.628000, 190.692000, 6.542000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom N16 at position 27.312000, 189.839000, 7.509000,
+            atom C15 at position 26.954000, 188.428000, 7.614000,
+        and atom H151 at position 27.688000, 187.924000, 7.997000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom N16 at position 27.312000, 189.839000, 7.509000,
+            atom C15 at position 26.954000, 188.428000, 7.614000,
+        and atom H152 at position 26.786000, 188.059000, 6.732000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom N16 at position 27.312000, 189.839000, 7.509000,
+            atom C16 at position 28.324000, 190.409000, 8.364000,
+        and atom H161 at position 28.430000, 191.351000, 8.157000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom N16 at position 27.312000, 189.839000, 7.509000,
+            atom C16 at position 28.324000, 190.409000, 8.364000,
+        and atom H162 at position 29.167000, 189.950000, 8.219000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom N16 at position 27.312000, 189.839000, 7.509000,
+            atom C16 at position 28.324000, 190.409000, 8.364000,
+        and atom H163 at position 28.058000, 190.311000, 9.291000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom N16 at position 27.312000, 189.839000, 7.509000,
+            atom C17 at position 26.628000, 190.692000, 6.542000,
+        and atom N18 at position 25.666000, 190.167000, 5.754000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom N16 at position 27.312000, 189.839000, 7.509000,
+            atom C17 at position 26.628000, 190.692000, 6.542000,
+        and atom C22 at position 26.951000, 192.032000, 6.419000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C17 at position 26.628000, 190.692000, 6.542000,
+            atom N18 at position 25.666000, 190.167000, 5.754000,
+        and atom C19 at position 25.010000, 190.927000, 4.846000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C17 at position 26.628000, 190.692000, 6.542000,
+            atom C22 at position 26.951000, 192.032000, 6.419000,
+        and atom C21 at position 26.293000, 192.793000, 5.512000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C17 at position 26.628000, 190.692000, 6.542000,
+            atom C22 at position 26.951000, 192.032000, 6.419000,
+        and atom H22 at position 27.642000, 192.422000, 6.977000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom N18 at position 25.666000, 190.167000, 5.754000,
+            atom C17 at position 26.628000, 190.692000, 6.542000,
+        and atom C22 at position 26.951000, 192.032000, 6.419000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom N18 at position 25.666000, 190.167000, 5.754000,
+            atom C19 at position 25.010000, 190.927000, 4.846000,
+        and atom C20 at position 25.329000, 192.262000, 4.727000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom N18 at position 25.666000, 190.167000, 5.754000,
+            atom C19 at position 25.010000, 190.927000, 4.846000,
+        and atom H19 at position 24.322000, 190.536000, 4.284000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C19 at position 25.010000, 190.927000, 4.846000,
+            atom C20 at position 25.329000, 192.262000, 4.727000,
+        and atom C21 at position 26.293000, 192.793000, 5.512000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C19 at position 25.010000, 190.927000, 4.846000,
+            atom C20 at position 25.329000, 192.262000, 4.727000,
+        and atom H20 at position 24.864000, 192.818000, 4.082000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C20 at position 25.329000, 192.262000, 4.727000,
+            atom C19 at position 25.010000, 190.927000, 4.846000,
+        and atom H19 at position 24.322000, 190.536000, 4.284000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C20 at position 25.329000, 192.262000, 4.727000,
+            atom C21 at position 26.293000, 192.793000, 5.512000,
+        and atom C22 at position 26.951000, 192.032000, 6.419000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C20 at position 25.329000, 192.262000, 4.727000,
+            atom C21 at position 26.293000, 192.793000, 5.512000,
+        and atom H21 at position 26.516000, 193.733000, 5.424000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C21 at position 26.293000, 192.793000, 5.512000,
+            atom C20 at position 25.329000, 192.262000, 4.727000,
+        and atom H20 at position 24.864000, 192.818000, 4.082000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C21 at position 26.293000, 192.793000, 5.512000,
+            atom C22 at position 26.951000, 192.032000, 6.419000,
+        and atom H22 at position 27.642000, 192.422000, 6.977000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom C22 at position 26.951000, 192.032000, 6.419000,
+            atom C21 at position 26.293000, 192.793000, 5.512000,
+        and atom H21 at position 26.516000, 193.733000, 5.424000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom H61 at position 21.245000, 189.059000, 13.508000,
+            atom C6 at position 21.765000, 189.866000, 13.368000,
+        and atom H62 at position 22.149000, 190.108000, 14.226000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom H141 at position 24.956000, 188.784000, 8.109000,
+            atom C14 at position 25.699000, 188.294000, 8.495000,
+        and atom H142 at position 25.423000, 187.366000, 8.558000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom H151 at position 27.688000, 187.924000, 7.997000,
+            atom C15 at position 26.954000, 188.428000, 7.614000,
+        and atom H152 at position 26.786000, 188.059000, 6.732000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom H161 at position 28.430000, 191.351000, 8.157000,
+            atom C16 at position 28.324000, 190.409000, 8.364000,
+        and atom H162 at position 29.167000, 189.950000, 8.219000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom H161 at position 28.430000, 191.351000, 8.157000,
+            atom C16 at position 28.324000, 190.409000, 8.364000,
+        and atom H163 at position 28.058000, 190.311000, 9.291000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Error!
+Could not find angle parameter for atom types:  -  - 
+        for atom H162 at position 29.167000, 189.950000, 8.219000,
+            atom C16 at position 28.324000, 190.409000, 8.364000,
+        and atom H163 at position 28.058000, 190.311000, 9.291000.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Warning!
+There are missing parameters.
+check:  Errors:  44   Warnings: 5
+> charge complex
+Total unperturbed charge:  -4.000000
+Total perturbed charge:    -4.000000
+> 
+> addions complex Na+ 0
+4 Na+ ions required to neutralize.
+Adding 4 counter ions to "complex" using 1A grid
+Used default radius  1.50 for 44 atoms
+Total solute charge:  -4.00  Max atom radius:   2.00
+Grid extends from solute vdw + 1.37  to  7.37
+Box:
+   enclosing:  -9.51 142.10 -20.96   54.43 219.14 41.53
+   sized:			      118.49 270.10 107.04
+   edge:        128.00
+Resolution:      1.00 Angstrom.
+Tree depth: 7
+Volume =  2.90% of box, grid points 60834
+ (no solvent present)
+Calculating grid charges
+Placed Na+ in complex at (13.49, 169.10, 34.04).
+Placed Na+ in complex at (12.49, 164.10, 31.04).
+Placed Na+ in complex at (34.49, 201.10, 19.04).
+Placed Na+ in complex at (12.49, 155.10, 24.04).
+
+Done adding ions.
+> addions complex Cl- 0
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Warning!
+addIons: 1st Ion & target unit have charges of the same sign:
+     unit charge = -4.79616e-14; ion1 charge = -1;
+     can't neutralize.
+> 
+> solvateoct complex TIP3PBOX 10.0 iso
+ (using default radius 1.500000 for S1)
+ (using default radius 1.500000 for C2)
+ (using default radius 1.500000 for O2)
+ (using default radius 1.500000 for N3)
+ (using default radius 1.500000 for C4)
+ (using default radius 1.500000 for O4)
+ (using default radius 1.500000 for C5)
+ (using default radius 1.500000 for C6)
+ (using default radius 1.500000 for C7)
+ (using default radius 1.500000 for C8)
+ (using default radius 1.500000 for C9)
+ (using default radius 1.500000 for C10)
+ (using default radius 1.500000 for C11)
+ (using default radius 1.500000 for C12)
+ (using default radius 1.500000 for O13)
+ (using default radius 1.500000 for C14)
+ (using default radius 1.500000 for C15)
+ (using default radius 1.500000 for C16)
+ (using default radius 1.500000 for N16)
+ (using default radius 1.500000 for C17)
+ (using default radius 1.500000 for N18)
+ (using default radius 1.500000 for C19)
+ (using default radius 1.500000 for C20)
+ (using default radius 1.500000 for C21)
+ (using default radius 1.500000 for C22)
+Scaling up box by a factor of 1.218455 to meet diagonal cut criterion
+  Solute vdw bounding box:              40.086 68.418 56.833
+  Total bounding box for atom centers:  92.787 92.787 92.787
+      (box expansion for 'iso' is  64.5%)
+  Solvent unit box:                     18.774 18.774 18.774
+The number of boxes:  x= 5  y= 5  z= 5
+ (using default radius 1.500000 for S1)
+ (using default radius 1.500000 for C2)
+ (using default radius 1.500000 for O2)
+ (using default radius 1.500000 for N3)
+ (using default radius 1.500000 for C4)
+ (using default radius 1.500000 for O4)
+ (using default radius 1.500000 for C5)
+ (using default radius 1.500000 for C6)
+ (using default radius 1.500000 for C7)
+ (using default radius 1.500000 for C8)
+ (using default radius 1.500000 for C9)
+ (using default radius 1.500000 for C10)
+ (using default radius 1.500000 for C11)
+ (using default radius 1.500000 for C12)
+ (using default radius 1.500000 for O13)
+ (using default radius 1.500000 for C14)
+ (using default radius 1.500000 for C15)
+ (using default radius 1.500000 for C16)
+ (using default radius 1.500000 for N16)
+ (using default radius 1.500000 for C17)
+ (using default radius 1.500000 for N18)
+ (using default radius 1.500000 for C19)
+ (using default radius 1.500000 for C20)
+ (using default radius 1.500000 for C21)
+ (using default radius 1.500000 for C22)
+  Volume: 412472.573 A^3 (oct)
+  Mass > 221226.142 amu,  Density > 0.891 g/cc
+      (type - hence mass - of one or more atoms could not be found)
+  Added 10531 residues.
+> 
+> # addions complex K+ 11
+> # addions complex Cl- 11
+> 
+> saveamberparm complex prepin.prmtop prepin.inpcrd
+Checking Unit.
+FATAL:  Atom .R<BRL 1>.A<S1 1> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<C2 2> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<O2 3> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<N3 4> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<C4 5> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<O4 6> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<C5 7> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<C6 8> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<C7 9> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<C8 10> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<C9 11> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<C10 12> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<C11 13> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<C12 14> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<O13 15> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<C14 16> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<C15 17> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<C16 18> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<N16 19> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<C17 20> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<N18 21> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<C19 22> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<C20 23> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<C21 24> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<C22 25> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<HN3 26> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<H5 27> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<H8 28> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<H9 29> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<H11 30> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<H12 31> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<H19 32> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<H20 33> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<H21 34> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<H22 35> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<H61 36> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<H62 37> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<H141 38> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<H142 39> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<H151 40> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<H152 41> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<H161 42> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<H162 43> does not have a type.
+FATAL:  Atom .R<BRL 1>.A<H163 44> does not have a type.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Fatal Error!
+Failed to generate parameters
+
+Exiting LEaP: Errors = 125; Warnings = 10; Notes = 1.
+log started: Mon Sep 15 12:44:00 2025
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the ff14SB force field
+>> # ----- NOTE: this is designed for PDB format 3!
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "H"   "H" "sp3" }
+>> 	{ "HO"  "H" "sp3" }
+>> 	{ "HS"  "H" "sp3" }
+>> 	{ "H1"  "H" "sp3" }
+>> 	{ "H2"  "H" "sp3" }
+>> 	{ "H3"  "H" "sp3" }
+>> 	{ "H4"  "H" "sp3" }
+>> 	{ "H5"  "H" "sp3" }
+>> 	{ "HW"  "H" "sp3" }
+>> 	{ "HC"  "H" "sp3" }
+>> 	{ "HA"  "H" "sp3" }
+>> 	{ "HP"  "H" "sp3" }
+>> 	{ "HZ"  "H" "sp3" }
+>> 	{ "OH"  "O" "sp3" }
+>> 	{ "OS"  "O" "sp3" }
+>> 	{ "O"   "O" "sp2" }
+>> 	{ "O2"  "O" "sp2" }
+>> 	{ "OP"  "O" "sp2" }
+>> 	{ "OW"  "O" "sp3" }
+>> 	{ "CT"  "C" "sp3" }
+>> 	{ "CX"  "C" "sp3" }
+>> 	{ "C8"  "C" "sp3" }
+>> 	{ "2C"  "C" "sp3" }
+>> 	{ "3C"  "C" "sp3" }
+>> 	{ "CH"  "C" "sp3" }
+>> 	{ "CS"  "C" "sp2" }
+>> 	{ "C"   "C" "sp2" }
+>> 	{ "CO"   "C" "sp2" }
+>> 	{ "C*"  "C" "sp2" }
+>> 	{ "CA"  "C" "sp2" }
+>> 	{ "CB"  "C" "sp2" }
+>> 	{ "CC"  "C" "sp2" }
+>> 	{ "CN"  "C" "sp2" }
+>> 	{ "CM"  "C" "sp2" }
+>> 	{ "CK"  "C" "sp2" }
+>> 	{ "CQ"  "C" "sp2" }
+>> 	{ "CD"  "C" "sp2" }
+>> 	{ "C5"  "C" "sp2" }
+>> 	{ "C4"  "C" "sp2" }
+>> 	{ "CP"  "C" "sp2" }
+>> 	{ "CI"  "C" "sp3" }
+>> 	{ "CJ"  "C" "sp2" }
+>> 	{ "CW"  "C" "sp2" }
+>> 	{ "CV"  "C" "sp2" }
+>> 	{ "CR"  "C" "sp2" }
+>> 	{ "CA"  "C" "sp2" }
+>> 	{ "CY"  "C" "sp2" }
+>> 	{ "C0"  "Ca" "sp3" }
+>> 	{ "MG"  "Mg" "sp3" }
+>> 	{ "N"   "N" "sp2" }
+>> 	{ "NA"  "N" "sp2" }
+>> 	{ "N2"  "N" "sp2" }
+>> 	{ "N*"  "N" "sp2" }
+>> 	{ "NP"  "N" "sp2" }
+>> 	{ "NQ"  "N" "sp2" }
+>> 	{ "NB"  "N" "sp2" }
+>> 	{ "NC"  "N" "sp2" }
+>> 	{ "NT"  "N" "sp3" }
+>> 	{ "NY"  "N" "sp2" }
+>> 	{ "N3"  "N" "sp3" }
+>> 	{ "S"   "S" "sp3" }
+>> 	{ "SH"  "S" "sp3" }
+>> 	{ "P"   "P" "sp3" }
+>> 	{ "LP"  ""  "sp3" }
+>> 	{ "EP"  ""  "sp3" }
+>> 	{ "F"   "F" "sp3" }
+>> 	{ "Cl"  "Cl" "sp3" }
+>> 	{ "Br"  "Br" "sp3" }
+>> 	{ "I"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the main parameter set.
+>> #
+>> parm10 = loadamberparams parm10.dat
+Loading parameters: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+>> frcmod14SB = loadamberparams frcmod.ff14SB
+Loading parameters: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/parm/frcmod.ff14SB
+Reading force field modification type file (frcmod)
+Reading title:
+ff14SB protein backbone and sidechain parameters
+>> #
+>> #	Load main chain and terminating amino acid libraries
+>> #
+>> loadOff amino12.lib
+Loading library: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/lib/amino12.lib
+Loading: ALA
+Loading: ARG
+Loading: ASH
+Loading: ASN
+Loading: ASP
+Loading: CYM
+Loading: CYS
+Loading: CYX
+Loading: GLH
+Loading: GLN
+Loading: GLU
+Loading: GLY
+Loading: HID
+Loading: HIE
+Loading: HIP
+Loading: HYP
+Loading: ILE
+Loading: LEU
+Loading: LYN
+Loading: LYS
+Loading: MET
+Loading: PHE
+Loading: PRO
+Loading: SER
+Loading: THR
+Loading: TRP
+Loading: TYR
+Loading: VAL
+>> loadOff aminoct12.lib
+Loading library: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/lib/aminoct12.lib
+Loading: CALA
+Loading: CARG
+Loading: CASN
+Loading: CASP
+Loading: CCYS
+Loading: CCYX
+Loading: CGLN
+Loading: CGLU
+Loading: CGLY
+Loading: CHID
+Loading: CHIE
+Loading: CHIP
+Loading: CHYP
+Loading: CILE
+Loading: CLEU
+Loading: CLYS
+Loading: CMET
+Loading: CPHE
+Loading: CPRO
+Loading: CSER
+Loading: CTHR
+Loading: CTRP
+Loading: CTYR
+Loading: CVAL
+Loading: NHE
+Loading: NME
+>> loadOff aminont12.lib
+Loading library: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/lib/aminont12.lib
+Loading: ACE
+Loading: NALA
+Loading: NARG
+Loading: NASN
+Loading: NASP
+Loading: NCYS
+Loading: NCYX
+Loading: NGLN
+Loading: NGLU
+Loading: NGLY
+Loading: NHID
+Loading: NHIE
+Loading: NHIP
+Loading: NILE
+Loading: NLEU
+Loading: NLYS
+Loading: NMET
+Loading: NPHE
+Loading: NPRO
+Loading: NSER
+Loading: NTHR
+Loading: NTRP
+Loading: NTYR
+Loading: NVAL
+>> 
+>> #
+>> #	Define the PDB name map for the amino acids
+>> #
+>> addPdbResMap {
+>>   { 0 "HYP" "HYP" } { 1 "HYP" "CHYP" }
+>>   { 0 "ALA" "NALA" } { 1 "ALA" "CALA" }
+>>   { 0 "ARG" "NARG" } { 1 "ARG" "CARG" }
+>>   { 0 "ASN" "NASN" } { 1 "ASN" "CASN" }
+>>   { 0 "ASP" "NASP" } { 1 "ASP" "CASP" }
+>>   { 0 "CYS" "NCYS" } { 1 "CYS" "CCYS" }
+>>   { 0 "CYX" "NCYX" } { 1 "CYX" "CCYX" }
+>>   { 0 "GLN" "NGLN" } { 1 "GLN" "CGLN" }
+>>   { 0 "GLU" "NGLU" } { 1 "GLU" "CGLU" }
+>>   { 0 "GLY" "NGLY" } { 1 "GLY" "CGLY" }
+>>   { 0 "HID" "NHID" } { 1 "HID" "CHID" }
+>>   { 0 "HIE" "NHIE" } { 1 "HIE" "CHIE" }
+>>   { 0 "HIP" "NHIP" } { 1 "HIP" "CHIP" }
+>>   { 0 "ILE" "NILE" } { 1 "ILE" "CILE" }
+>>   { 0 "LEU" "NLEU" } { 1 "LEU" "CLEU" }
+>>   { 0 "LYS" "NLYS" } { 1 "LYS" "CLYS" }
+>>   { 0 "MET" "NMET" } { 1 "MET" "CMET" }
+>>   { 0 "PHE" "NPHE" } { 1 "PHE" "CPHE" }
+>>   { 0 "PRO" "NPRO" } { 1 "PRO" "CPRO" }
+>>   { 0 "SER" "NSER" } { 1 "SER" "CSER" }
+>>   { 0 "THR" "NTHR" } { 1 "THR" "CTHR" }
+>>   { 0 "TRP" "NTRP" } { 1 "TRP" "CTRP" }
+>>   { 0 "TYR" "NTYR" } { 1 "TYR" "CTYR" }
+>>   { 0 "VAL" "NVAL" } { 1 "VAL" "CVAL" }
+>>   { 0 "HIS" "NHIS" } { 1 "HIS" "CHIS" }
+>> }
+>> 
+>> #
+>> # assume that most often proteins use HIE
+>> #
+>> NHIS = NHIE
+>> HIS = HIE
+>> CHIS = CHIE
+> 
+> source leaprc.gaff
+----- Source: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/cmd/leaprc.gaff
+----- Source of /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/cmd/leaprc.gaff done
+>> logFile leap.log
+log started: Mon Sep 15 12:44:01 2025
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "op"  "O" "sp3" }
+>> 	{ "oq"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "ni"  "N" "sp2" }
+>> 	{ "nj"  "N" "sp2" }
+>> 	{ "nk"  "N" "sp3" }
+>> 	{ "nl"  "N" "sp3" }
+>> 	{ "nm"  "N" "sp2" }
+>> 	{ "nn"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "np"  "N" "sp3" }
+>> 	{ "nq"  "N" "sp3" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "sp"   "S" "sp3" }
+>> 	{ "sq"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff.dat
+Loading parameters: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.81, May 2017)
+> 
+> source leaprc.water.tip3p
+----- Source: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/cmd/leaprc.water.tip3p
+----- Source of /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/cmd/leaprc.water.tip3p done
+>> #
+>> #       Load water and ions for TIP3P + Li/Merz monovalent ions 
+>> #       + Joung-Chetham monovalent ions
+>> #       + Li/Merz highly charged ions (+2 to +4, 12-6 normal usage set)
+>> #
+>> #       Note: the Li/Merz monovalent set is loaded only to get Tl+,
+>> #          Cu+, Ag+ NH4+, H3O+.  Since we load Joung-Cheatham second,
+>> #          the alkali halide parameters come from the Joung-Cheatham set
+>> #
+>> addAtomTypes {
+>> 	{ "HW"  "H" "sp3" }
+>> 	{ "OW"  "O" "sp3" }
+>> 	{ "F-"   "F" "sp3" }
+>> 	{ "Cl-"  "Cl" "sp3" }
+>> 	{ "Br-"  "Br" "sp3" }
+>> 	{ "I-"   "I"  "sp3" }
+>> 	{ "Li+"  "Li"  "sp3" }
+>> 	{ "Na+"  "Na"  "sp3" }
+>> 	{ "K+"  "K"  "sp3" }
+>> 	{ "Rb+"  "Rb"  "sp3" }
+>> 	{ "Cs+"  "Cs"  "sp3" }
+>> 	{ "Mg+"  "Mg"  "sp3" }
+>>     { "Tl+"  "Tl"  "sp3" }
+>>     { "Cu+"  "Cu"  "sp3" }
+>>     { "Ag+"  "Ag"  "sp3" }
+>>     { "NH4+"  "N"  "sp3" }
+>>     { "H3O+"  "O"  "sp3" }
+>>     { "Be2+" "Be"  "sp3" }
+>>     { "Cu2+" "Cu"  "sp3" }
+>>     { "Ni2+" "Ni"  "sp3" }
+>>     { "Pt2+" "Pt"  "sp3" }
+>>     { "Zn2+" "Zn"  "sp3" }
+>>     { "Co2+" "Co"  "sp3" }
+>>     { "Pd2+" "Pd"  "sp3" }
+>>     { "Ag2+" "Ag"  "sp3" }
+>>     { "Cr2+" "Cr"  "sp3" }
+>>     { "Fe2+" "Fe"  "sp3" }
+>>     { "Mg2+" "Mg"  "sp3" }
+>>     { "V2+"  "V"   "sp3" }
+>>     { "Mn2+" "Mn"  "sp3" }
+>>     { "Hg2+" "Hg"  "sp3" }
+>>     { "Cd2+" "Cd"  "sp3" }
+>>     { "Yb2+" "Yb"  "sp3" }
+>>     { "Ca2+" "Ca"  "sp3" }
+>>     { "Sn2+" "Sn"  "sp3" }
+>>     { "Pb2+" "Pb"  "sp3" }
+>>     { "Eu2+" "Eu"  "sp3" }
+>>     { "Sr2+" "Sr"  "sp3" }
+>>     { "Sm2+" "Sm"  "sp3" }
+>>     { "Ba2+" "Ba"  "sp3" }
+>>     { "Ra2+" "Ra"  "sp3" }
+>>     { "Al3+" "Al"  "sp3" }
+>>     { "Fe3+" "Fe"  "sp3" }
+>>     { "Cr3+" "Cr"  "sp3" }
+>>     { "In3+" "In"  "sp3" }
+>>     { "Tl3+" "Tl"  "sp3" }
+>>     { "Y3+"  "Y"   "sp3" }
+>>     { "La3+" "La"  "sp3" }
+>>     { "Ce3+" "Ce"  "sp3" }
+>>     { "Pr3+" "Pr"  "sp3" }
+>>     { "Nd3+" "Nd"  "sp3" }
+>>     { "Sm3+" "Sm"  "sp3" }
+>>     { "Eu3+" "Eu"  "sp3" }
+>>     { "Gd3+" "Gd"  "sp3" }
+>>     { "Tb3+" "Tb"  "sp3" }
+>>     { "Dy3+" "Dy"  "sp3" }
+>>     { "Er3+" "Er"  "sp3" }
+>>     { "Tm3+" "Tm"  "sp3" }
+>>     { "Lu3+" "Lu"  "sp3" }
+>>     { "Hf4+" "Hf"  "sp3" }
+>>     { "Zr4+" "Zr"  "sp3" }
+>>     { "Ce4+" "Ce"  "sp3" }
+>>     { "U4+"  "U"   "sp3" }
+>>     { "Pu4+" "Pu"  "sp3" }
+>>     { "Th4+" "Th"  "sp3" }
+>> }
+>> loadOff atomic_ions.lib
+Loading library: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/lib/atomic_ions.lib
+Loading: AG
+Loading: AL
+Loading: Ag
+Loading: BA
+Loading: BR
+Loading: Be
+Loading: CA
+Loading: CD
+Loading: CE
+Loading: CL
+Loading: CO
+Loading: CR
+Loading: CS
+Loading: CU
+Loading: CU1
+Loading: Ce
+Loading: Cl-
+Loading: Cr
+Loading: Dy
+Loading: EU
+Loading: EU3
+Loading: Er
+Loading: F
+Loading: FE
+Loading: FE2
+Loading: GD3
+Loading: H3O+
+Loading: HE+
+Loading: HG
+Loading: HZ+
+Loading: Hf
+Loading: IN
+Loading: IOD
+Loading: K
+Loading: K+
+Loading: LA
+Loading: LI
+Loading: LU
+Loading: MG
+Loading: MN
+Loading: NA
+Loading: NH4
+Loading: NI
+Loading: Na+
+Loading: Nd
+Loading: PB
+Loading: PD
+Loading: PR
+Loading: PT
+Loading: Pu
+Loading: RB
+Loading: Ra
+Loading: SM
+Loading: SR
+Loading: Sm
+Loading: Sn
+Loading: TB
+Loading: TL
+Loading: Th
+Loading: Tl
+Loading: Tm
+Loading: U4+
+Loading: V2+
+Loading: Y
+Loading: YB2
+Loading: ZN
+Loading: Zr
+>> loadOff solvents.lib
+Loading library: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/lib/solvents.lib
+Loading: CHCL3BOX
+Loading: DC4
+Loading: FB3
+Loading: FB3BOX
+Loading: FB4
+Loading: FB4BOX
+Loading: MEOHBOX
+Loading: NMABOX
+Loading: O3P
+Loading: OP3
+Loading: OPC
+Loading: OPC3BOX
+Loading: OPC3POLBOX
+Loading: OPCBOX
+Loading: PL3
+Loading: POL3BOX
+Loading: QSPCFWBOX
+Loading: SPC
+Loading: SPCBOX
+Loading: SPCFWBOX
+Loading: SPF
+Loading: SPG
+Loading: T4E
+Loading: TIP3PBOX
+Loading: TIP3PFBOX
+Loading: TIP4PBOX
+Loading: TIP4PEWBOX
+Loading: TIP5PBOX
+Loading: TP3
+Loading: TP4
+Loading: TP5
+Loading: TPF
+>> HOH = TP3
+>> WAT = TP3
+>> loadAmberParams frcmod.tip3p
+Loading parameters: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/parm/frcmod.tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+This is the additional/replacement parameter set for TIP3P water
+>> loadAmberParams frcmod.ions1lm_126_tip3p
+Loading parameters: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/parm/frcmod.ions1lm_126_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of monovalent ions for TIP3P water model (12-6 normal usage set)
+>> loadAmberParams frcmod.ionsjc_tip3p
+Loading parameters: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/parm/frcmod.ionsjc_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and TIP3P water from Joung & Cheatham JPCB (2008)
+>> loadAmberParams frcmod.ions234lm_126_tip3p
+Loading parameters: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/parm/frcmod.ions234lm_126_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of divalent to tetravalent ions for TIP3P water model (12-6 normal usage set)
+>> 
+> 
+> 
+> loadamberparams ligand_prep/BRL.frcmod
+Loading parameters: ./ligand_prep/BRL.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+> BRL = loadmol3 RED_server_P7173/Data-R.E.D.Server/Mol_m1/Mol-sm_m1-c1.mol2 
+Loading Mol3 file: ./RED_server_P7173/Data-R.E.D.Server/Mol_m1/Mol-sm_m1-c1.mol2
+Reading MOLECULE named BRL
+> complex = loadPdb 6ONJ_BRL_complex.pdb
+Loading PDB file: ./6ONJ_BRL_complex.pdb
+ (starting new molecule for chain  )
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Warning!
+Name change in pdb file residue 1 ;
+this residue is split into BRL and GLN.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Note.
+1 residues had naming warnings.
+Thus, there are split residues;
+residue sequence numbers will not correspond to those in the pdb.
+Matching PDB residue names to LEaP variables.
+Mapped residue GLN, term: Terminal/beginning, seq. number: 1 to: NGLN.
+Mapped residue TYR, term: Terminal/last, seq. number: 275 to: CTYR.
+  total atoms in file: 4531
+> 
+> check complex
+Checking 'complex'....
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Warning!
+The unperturbed charge of the unit (-4.000000) is not zero.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Warning!
+Close contact of 1.393 angstroms between nonbonded atoms HG23 and H
+-------  .R<THR 148>.A<HG23 10> and .R<PHE 151>.A<H 2>
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Warning!
+Close contact of 1.358 angstroms between nonbonded atoms HB3 and HB2
+-------  .R<LYS 157>.A<HB3 7> and .R<LYS 157>.A<HB2 6>
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Warning!
+Close contact of 1.392 angstroms between nonbonded atoms OD1 and HG
+-------  .R<ASP 179>.A<OD1 9> and .R<SER 181>.A<HG 9>
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Warning!
+Close contact of 1.463 angstroms between nonbonded atoms HB3 and HB2
+-------  .R<GLU 259>.A<HB3 7> and .R<GLU 259>.A<HB2 6>
+Checking parameters for unit 'complex'.
+Checking for bond parameters.
+Checking for angle parameters.
+check:  Warnings: 5
+Unit is OK.
+> charge complex
+Total unperturbed charge:  -4.000000
+Total perturbed charge:    -4.000000
+> 
+> addions complex Na+ 0
+4 Na+ ions required to neutralize.
+Adding 4 counter ions to "complex" using 1A grid
+Total solute charge:  -4.00  Max atom radius:   2.00
+Grid extends from solute vdw + 1.37  to  7.37
+Box:
+   enclosing:  -9.51 142.10 -20.96   54.43 219.14 41.53
+   sized:			      118.49 270.10 107.04
+   edge:        128.00
+Resolution:      1.00 Angstrom.
+Tree depth: 7
+Volume =  2.91% of box, grid points 60978
+ (no solvent present)
+Calculating grid charges
+Placed Na+ in complex at (13.49, 169.10, 34.04).
+Placed Na+ in complex at (12.49, 164.10, 31.04).
+Placed Na+ in complex at (34.49, 201.10, 19.04).
+Placed Na+ in complex at (12.49, 155.10, 24.04).
+
+Done adding ions.
+> addions complex Cl- 0
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Warning!
+addIons: 1st Ion & target unit have charges of the same sign:
+     unit charge = -4.79616e-14; ion1 charge = -1;
+     can't neutralize.
+> 
+> solvateoct complex TIP3PBOX 10.0 iso
+Scaling up box by a factor of 1.218024 to meet diagonal cut criterion
+  Solute vdw bounding box:              40.086 68.389 56.805
+  Total bounding box for atom centers:  92.749 92.749 92.749
+      (box expansion for 'iso' is  64.5%)
+  Solvent unit box:                     18.774 18.774 18.774
+The number of boxes:  x= 5  y= 5  z= 5
+  Volume: 411975.780 A^3 (oct)
+  Total mass 221547.532 amu,  Density 0.893 g/cc
+  Added 10529 residues.
+> 
+> # addions complex K+ 11
+> # addions complex Cl- 11
+> 
+> saveamberparm complex prepin.prmtop prepin.inpcrd
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 848 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	BRL	1
+	CTYR	1
+	NGLN	1
+	WAT	10529
+  )
+ (no restraints)
+> savepdb complex prepin.pdb
+Writing pdb file: prepin.pdb
+   printing CRYST1 record to PDB file with box info
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Warning!
+ Converting N-terminal residue name to PDB format: NGLN -> GLN
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Warning!
+ Converting C-terminal residue name to PDB format: CTYR -> TYR
+> 
+> quit
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 9; Notes = 1.
+log started: Mon Sep 15 12:48:21 2025
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the ff14SB force field
+>> # ----- NOTE: this is designed for PDB format 3!
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "H"   "H" "sp3" }
+>> 	{ "HO"  "H" "sp3" }
+>> 	{ "HS"  "H" "sp3" }
+>> 	{ "H1"  "H" "sp3" }
+>> 	{ "H2"  "H" "sp3" }
+>> 	{ "H3"  "H" "sp3" }
+>> 	{ "H4"  "H" "sp3" }
+>> 	{ "H5"  "H" "sp3" }
+>> 	{ "HW"  "H" "sp3" }
+>> 	{ "HC"  "H" "sp3" }
+>> 	{ "HA"  "H" "sp3" }
+>> 	{ "HP"  "H" "sp3" }
+>> 	{ "HZ"  "H" "sp3" }
+>> 	{ "OH"  "O" "sp3" }
+>> 	{ "OS"  "O" "sp3" }
+>> 	{ "O"   "O" "sp2" }
+>> 	{ "O2"  "O" "sp2" }
+>> 	{ "OP"  "O" "sp2" }
+>> 	{ "OW"  "O" "sp3" }
+>> 	{ "CT"  "C" "sp3" }
+>> 	{ "CX"  "C" "sp3" }
+>> 	{ "C8"  "C" "sp3" }
+>> 	{ "2C"  "C" "sp3" }
+>> 	{ "3C"  "C" "sp3" }
+>> 	{ "CH"  "C" "sp3" }
+>> 	{ "CS"  "C" "sp2" }
+>> 	{ "C"   "C" "sp2" }
+>> 	{ "CO"   "C" "sp2" }
+>> 	{ "C*"  "C" "sp2" }
+>> 	{ "CA"  "C" "sp2" }
+>> 	{ "CB"  "C" "sp2" }
+>> 	{ "CC"  "C" "sp2" }
+>> 	{ "CN"  "C" "sp2" }
+>> 	{ "CM"  "C" "sp2" }
+>> 	{ "CK"  "C" "sp2" }
+>> 	{ "CQ"  "C" "sp2" }
+>> 	{ "CD"  "C" "sp2" }
+>> 	{ "C5"  "C" "sp2" }
+>> 	{ "C4"  "C" "sp2" }
+>> 	{ "CP"  "C" "sp2" }
+>> 	{ "CI"  "C" "sp3" }
+>> 	{ "CJ"  "C" "sp2" }
+>> 	{ "CW"  "C" "sp2" }
+>> 	{ "CV"  "C" "sp2" }
+>> 	{ "CR"  "C" "sp2" }
+>> 	{ "CA"  "C" "sp2" }
+>> 	{ "CY"  "C" "sp2" }
+>> 	{ "C0"  "Ca" "sp3" }
+>> 	{ "MG"  "Mg" "sp3" }
+>> 	{ "N"   "N" "sp2" }
+>> 	{ "NA"  "N" "sp2" }
+>> 	{ "N2"  "N" "sp2" }
+>> 	{ "N*"  "N" "sp2" }
+>> 	{ "NP"  "N" "sp2" }
+>> 	{ "NQ"  "N" "sp2" }
+>> 	{ "NB"  "N" "sp2" }
+>> 	{ "NC"  "N" "sp2" }
+>> 	{ "NT"  "N" "sp3" }
+>> 	{ "NY"  "N" "sp2" }
+>> 	{ "N3"  "N" "sp3" }
+>> 	{ "S"   "S" "sp3" }
+>> 	{ "SH"  "S" "sp3" }
+>> 	{ "P"   "P" "sp3" }
+>> 	{ "LP"  ""  "sp3" }
+>> 	{ "EP"  ""  "sp3" }
+>> 	{ "F"   "F" "sp3" }
+>> 	{ "Cl"  "Cl" "sp3" }
+>> 	{ "Br"  "Br" "sp3" }
+>> 	{ "I"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the main parameter set.
+>> #
+>> parm10 = loadamberparams parm10.dat
+Loading parameters: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+>> frcmod14SB = loadamberparams frcmod.ff14SB
+Loading parameters: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/parm/frcmod.ff14SB
+Reading force field modification type file (frcmod)
+Reading title:
+ff14SB protein backbone and sidechain parameters
+>> #
+>> #	Load main chain and terminating amino acid libraries
+>> #
+>> loadOff amino12.lib
+Loading library: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/lib/amino12.lib
+Loading: ALA
+Loading: ARG
+Loading: ASH
+Loading: ASN
+Loading: ASP
+Loading: CYM
+Loading: CYS
+Loading: CYX
+Loading: GLH
+Loading: GLN
+Loading: GLU
+Loading: GLY
+Loading: HID
+Loading: HIE
+Loading: HIP
+Loading: HYP
+Loading: ILE
+Loading: LEU
+Loading: LYN
+Loading: LYS
+Loading: MET
+Loading: PHE
+Loading: PRO
+Loading: SER
+Loading: THR
+Loading: TRP
+Loading: TYR
+Loading: VAL
+>> loadOff aminoct12.lib
+Loading library: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/lib/aminoct12.lib
+Loading: CALA
+Loading: CARG
+Loading: CASN
+Loading: CASP
+Loading: CCYS
+Loading: CCYX
+Loading: CGLN
+Loading: CGLU
+Loading: CGLY
+Loading: CHID
+Loading: CHIE
+Loading: CHIP
+Loading: CHYP
+Loading: CILE
+Loading: CLEU
+Loading: CLYS
+Loading: CMET
+Loading: CPHE
+Loading: CPRO
+Loading: CSER
+Loading: CTHR
+Loading: CTRP
+Loading: CTYR
+Loading: CVAL
+Loading: NHE
+Loading: NME
+>> loadOff aminont12.lib
+Loading library: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/lib/aminont12.lib
+Loading: ACE
+Loading: NALA
+Loading: NARG
+Loading: NASN
+Loading: NASP
+Loading: NCYS
+Loading: NCYX
+Loading: NGLN
+Loading: NGLU
+Loading: NGLY
+Loading: NHID
+Loading: NHIE
+Loading: NHIP
+Loading: NILE
+Loading: NLEU
+Loading: NLYS
+Loading: NMET
+Loading: NPHE
+Loading: NPRO
+Loading: NSER
+Loading: NTHR
+Loading: NTRP
+Loading: NTYR
+Loading: NVAL
+>> 
+>> #
+>> #	Define the PDB name map for the amino acids
+>> #
+>> addPdbResMap {
+>>   { 0 "HYP" "HYP" } { 1 "HYP" "CHYP" }
+>>   { 0 "ALA" "NALA" } { 1 "ALA" "CALA" }
+>>   { 0 "ARG" "NARG" } { 1 "ARG" "CARG" }
+>>   { 0 "ASN" "NASN" } { 1 "ASN" "CASN" }
+>>   { 0 "ASP" "NASP" } { 1 "ASP" "CASP" }
+>>   { 0 "CYS" "NCYS" } { 1 "CYS" "CCYS" }
+>>   { 0 "CYX" "NCYX" } { 1 "CYX" "CCYX" }
+>>   { 0 "GLN" "NGLN" } { 1 "GLN" "CGLN" }
+>>   { 0 "GLU" "NGLU" } { 1 "GLU" "CGLU" }
+>>   { 0 "GLY" "NGLY" } { 1 "GLY" "CGLY" }
+>>   { 0 "HID" "NHID" } { 1 "HID" "CHID" }
+>>   { 0 "HIE" "NHIE" } { 1 "HIE" "CHIE" }
+>>   { 0 "HIP" "NHIP" } { 1 "HIP" "CHIP" }
+>>   { 0 "ILE" "NILE" } { 1 "ILE" "CILE" }
+>>   { 0 "LEU" "NLEU" } { 1 "LEU" "CLEU" }
+>>   { 0 "LYS" "NLYS" } { 1 "LYS" "CLYS" }
+>>   { 0 "MET" "NMET" } { 1 "MET" "CMET" }
+>>   { 0 "PHE" "NPHE" } { 1 "PHE" "CPHE" }
+>>   { 0 "PRO" "NPRO" } { 1 "PRO" "CPRO" }
+>>   { 0 "SER" "NSER" } { 1 "SER" "CSER" }
+>>   { 0 "THR" "NTHR" } { 1 "THR" "CTHR" }
+>>   { 0 "TRP" "NTRP" } { 1 "TRP" "CTRP" }
+>>   { 0 "TYR" "NTYR" } { 1 "TYR" "CTYR" }
+>>   { 0 "VAL" "NVAL" } { 1 "VAL" "CVAL" }
+>>   { 0 "HIS" "NHIS" } { 1 "HIS" "CHIS" }
+>> }
+>> 
+>> #
+>> # assume that most often proteins use HIE
+>> #
+>> NHIS = NHIE
+>> HIS = HIE
+>> CHIS = CHIE
+> 
+> source leaprc.gaff
+----- Source: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/cmd/leaprc.gaff
+----- Source of /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/cmd/leaprc.gaff done
+>> logFile leap.log
+log started: Mon Sep 15 12:48:21 2025
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "op"  "O" "sp3" }
+>> 	{ "oq"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "ni"  "N" "sp2" }
+>> 	{ "nj"  "N" "sp2" }
+>> 	{ "nk"  "N" "sp3" }
+>> 	{ "nl"  "N" "sp3" }
+>> 	{ "nm"  "N" "sp2" }
+>> 	{ "nn"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "np"  "N" "sp3" }
+>> 	{ "nq"  "N" "sp3" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "sp"   "S" "sp3" }
+>> 	{ "sq"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff.dat
+Loading parameters: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.81, May 2017)
+> 
+> source leaprc.water.tip3p
+----- Source: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/cmd/leaprc.water.tip3p
+----- Source of /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/cmd/leaprc.water.tip3p done
+>> #
+>> #       Load water and ions for TIP3P + Li/Merz monovalent ions 
+>> #       + Joung-Chetham monovalent ions
+>> #       + Li/Merz highly charged ions (+2 to +4, 12-6 normal usage set)
+>> #
+>> #       Note: the Li/Merz monovalent set is loaded only to get Tl+,
+>> #          Cu+, Ag+ NH4+, H3O+.  Since we load Joung-Cheatham second,
+>> #          the alkali halide parameters come from the Joung-Cheatham set
+>> #
+>> addAtomTypes {
+>> 	{ "HW"  "H" "sp3" }
+>> 	{ "OW"  "O" "sp3" }
+>> 	{ "F-"   "F" "sp3" }
+>> 	{ "Cl-"  "Cl" "sp3" }
+>> 	{ "Br-"  "Br" "sp3" }
+>> 	{ "I-"   "I"  "sp3" }
+>> 	{ "Li+"  "Li"  "sp3" }
+>> 	{ "Na+"  "Na"  "sp3" }
+>> 	{ "K+"  "K"  "sp3" }
+>> 	{ "Rb+"  "Rb"  "sp3" }
+>> 	{ "Cs+"  "Cs"  "sp3" }
+>> 	{ "Mg+"  "Mg"  "sp3" }
+>>     { "Tl+"  "Tl"  "sp3" }
+>>     { "Cu+"  "Cu"  "sp3" }
+>>     { "Ag+"  "Ag"  "sp3" }
+>>     { "NH4+"  "N"  "sp3" }
+>>     { "H3O+"  "O"  "sp3" }
+>>     { "Be2+" "Be"  "sp3" }
+>>     { "Cu2+" "Cu"  "sp3" }
+>>     { "Ni2+" "Ni"  "sp3" }
+>>     { "Pt2+" "Pt"  "sp3" }
+>>     { "Zn2+" "Zn"  "sp3" }
+>>     { "Co2+" "Co"  "sp3" }
+>>     { "Pd2+" "Pd"  "sp3" }
+>>     { "Ag2+" "Ag"  "sp3" }
+>>     { "Cr2+" "Cr"  "sp3" }
+>>     { "Fe2+" "Fe"  "sp3" }
+>>     { "Mg2+" "Mg"  "sp3" }
+>>     { "V2+"  "V"   "sp3" }
+>>     { "Mn2+" "Mn"  "sp3" }
+>>     { "Hg2+" "Hg"  "sp3" }
+>>     { "Cd2+" "Cd"  "sp3" }
+>>     { "Yb2+" "Yb"  "sp3" }
+>>     { "Ca2+" "Ca"  "sp3" }
+>>     { "Sn2+" "Sn"  "sp3" }
+>>     { "Pb2+" "Pb"  "sp3" }
+>>     { "Eu2+" "Eu"  "sp3" }
+>>     { "Sr2+" "Sr"  "sp3" }
+>>     { "Sm2+" "Sm"  "sp3" }
+>>     { "Ba2+" "Ba"  "sp3" }
+>>     { "Ra2+" "Ra"  "sp3" }
+>>     { "Al3+" "Al"  "sp3" }
+>>     { "Fe3+" "Fe"  "sp3" }
+>>     { "Cr3+" "Cr"  "sp3" }
+>>     { "In3+" "In"  "sp3" }
+>>     { "Tl3+" "Tl"  "sp3" }
+>>     { "Y3+"  "Y"   "sp3" }
+>>     { "La3+" "La"  "sp3" }
+>>     { "Ce3+" "Ce"  "sp3" }
+>>     { "Pr3+" "Pr"  "sp3" }
+>>     { "Nd3+" "Nd"  "sp3" }
+>>     { "Sm3+" "Sm"  "sp3" }
+>>     { "Eu3+" "Eu"  "sp3" }
+>>     { "Gd3+" "Gd"  "sp3" }
+>>     { "Tb3+" "Tb"  "sp3" }
+>>     { "Dy3+" "Dy"  "sp3" }
+>>     { "Er3+" "Er"  "sp3" }
+>>     { "Tm3+" "Tm"  "sp3" }
+>>     { "Lu3+" "Lu"  "sp3" }
+>>     { "Hf4+" "Hf"  "sp3" }
+>>     { "Zr4+" "Zr"  "sp3" }
+>>     { "Ce4+" "Ce"  "sp3" }
+>>     { "U4+"  "U"   "sp3" }
+>>     { "Pu4+" "Pu"  "sp3" }
+>>     { "Th4+" "Th"  "sp3" }
+>> }
+>> loadOff atomic_ions.lib
+Loading library: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/lib/atomic_ions.lib
+Loading: AG
+Loading: AL
+Loading: Ag
+Loading: BA
+Loading: BR
+Loading: Be
+Loading: CA
+Loading: CD
+Loading: CE
+Loading: CL
+Loading: CO
+Loading: CR
+Loading: CS
+Loading: CU
+Loading: CU1
+Loading: Ce
+Loading: Cl-
+Loading: Cr
+Loading: Dy
+Loading: EU
+Loading: EU3
+Loading: Er
+Loading: F
+Loading: FE
+Loading: FE2
+Loading: GD3
+Loading: H3O+
+Loading: HE+
+Loading: HG
+Loading: HZ+
+Loading: Hf
+Loading: IN
+Loading: IOD
+Loading: K
+Loading: K+
+Loading: LA
+Loading: LI
+Loading: LU
+Loading: MG
+Loading: MN
+Loading: NA
+Loading: NH4
+Loading: NI
+Loading: Na+
+Loading: Nd
+Loading: PB
+Loading: PD
+Loading: PR
+Loading: PT
+Loading: Pu
+Loading: RB
+Loading: Ra
+Loading: SM
+Loading: SR
+Loading: Sm
+Loading: Sn
+Loading: TB
+Loading: TL
+Loading: Th
+Loading: Tl
+Loading: Tm
+Loading: U4+
+Loading: V2+
+Loading: Y
+Loading: YB2
+Loading: ZN
+Loading: Zr
+>> loadOff solvents.lib
+Loading library: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/lib/solvents.lib
+Loading: CHCL3BOX
+Loading: DC4
+Loading: FB3
+Loading: FB3BOX
+Loading: FB4
+Loading: FB4BOX
+Loading: MEOHBOX
+Loading: NMABOX
+Loading: O3P
+Loading: OP3
+Loading: OPC
+Loading: OPC3BOX
+Loading: OPC3POLBOX
+Loading: OPCBOX
+Loading: PL3
+Loading: POL3BOX
+Loading: QSPCFWBOX
+Loading: SPC
+Loading: SPCBOX
+Loading: SPCFWBOX
+Loading: SPF
+Loading: SPG
+Loading: T4E
+Loading: TIP3PBOX
+Loading: TIP3PFBOX
+Loading: TIP4PBOX
+Loading: TIP4PEWBOX
+Loading: TIP5PBOX
+Loading: TP3
+Loading: TP4
+Loading: TP5
+Loading: TPF
+>> HOH = TP3
+>> WAT = TP3
+>> loadAmberParams frcmod.tip3p
+Loading parameters: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/parm/frcmod.tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+This is the additional/replacement parameter set for TIP3P water
+>> loadAmberParams frcmod.ions1lm_126_tip3p
+Loading parameters: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/parm/frcmod.ions1lm_126_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of monovalent ions for TIP3P water model (12-6 normal usage set)
+>> loadAmberParams frcmod.ionsjc_tip3p
+Loading parameters: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/parm/frcmod.ionsjc_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and TIP3P water from Joung & Cheatham JPCB (2008)
+>> loadAmberParams frcmod.ions234lm_126_tip3p
+Loading parameters: /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/dat/leap/parm/frcmod.ions234lm_126_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of divalent to tetravalent ions for TIP3P water model (12-6 normal usage set)
+>> 
+> 
+> 
+> loadamberparams ligand_prep/BRL.frcmod
+Loading parameters: ./ligand_prep/BRL.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+> BRL = loadmol3 RED_server_P7173/Data-R.E.D.Server/Mol_m1/Mol-sm_m1-c1.mol2 
+Loading Mol3 file: ./RED_server_P7173/Data-R.E.D.Server/Mol_m1/Mol-sm_m1-c1.mol2
+Reading MOLECULE named BRL
+> complex = loadPdb 6ONJ_BRL_complex.pdb
+Loading PDB file: ./6ONJ_BRL_complex.pdb
+ (starting new molecule for chain  )
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Warning!
+Name change in pdb file residue 1 ;
+this residue is split into BRL and GLN.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Note.
+1 residues had naming warnings.
+Thus, there are split residues;
+residue sequence numbers will not correspond to those in the pdb.
+Matching PDB residue names to LEaP variables.
+Mapped residue GLN, term: Terminal/beginning, seq. number: 1 to: NGLN.
+Mapped residue TYR, term: Terminal/last, seq. number: 275 to: CTYR.
+  total atoms in file: 4531
+> 
+> check complex
+Checking 'complex'....
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Warning!
+The unperturbed charge of the unit (-4.000000) is not zero.
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Warning!
+Close contact of 1.393 angstroms between nonbonded atoms HG23 and H
+-------  .R<THR 148>.A<HG23 10> and .R<PHE 151>.A<H 2>
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Warning!
+Close contact of 1.358 angstroms between nonbonded atoms HB3 and HB2
+-------  .R<LYS 157>.A<HB3 7> and .R<LYS 157>.A<HB2 6>
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Warning!
+Close contact of 1.392 angstroms between nonbonded atoms OD1 and HG
+-------  .R<ASP 179>.A<OD1 9> and .R<SER 181>.A<HG 9>
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Warning!
+Close contact of 1.463 angstroms between nonbonded atoms HB3 and HB2
+-------  .R<GLU 259>.A<HB3 7> and .R<GLU 259>.A<HB2 6>
+Checking parameters for unit 'complex'.
+Checking for bond parameters.
+Checking for angle parameters.
+check:  Warnings: 5
+Unit is OK.
+> charge complex
+Total unperturbed charge:  -4.000000
+Total perturbed charge:    -4.000000
+> 
+> addions complex Na+ 0
+4 Na+ ions required to neutralize.
+Adding 4 counter ions to "complex" using 1A grid
+Total solute charge:  -4.00  Max atom radius:   2.00
+Grid extends from solute vdw + 1.37  to  7.37
+Box:
+   enclosing:  -9.51 142.10 -20.96   54.43 219.14 41.53
+   sized:			      118.49 270.10 107.04
+   edge:        128.00
+Resolution:      1.00 Angstrom.
+Tree depth: 7
+Volume =  2.91% of box, grid points 60978
+ (no solvent present)
+Calculating grid charges
+Placed Na+ in complex at (13.49, 169.10, 34.04).
+Placed Na+ in complex at (12.49, 164.10, 31.04).
+Placed Na+ in complex at (34.49, 201.10, 19.04).
+Placed Na+ in complex at (12.49, 155.10, 24.04).
+
+Done adding ions.
+> addions complex Cl- 0
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Warning!
+addIons: 1st Ion & target unit have charges of the same sign:
+     unit charge = -4.79616e-14; ion1 charge = -1;
+     can't neutralize.
+> 
+> solvateoct complex TIP3PBOX 10.0 iso
+Scaling up box by a factor of 1.218024 to meet diagonal cut criterion
+  Solute vdw bounding box:              40.086 68.389 56.805
+  Total bounding box for atom centers:  92.749 92.749 92.749
+      (box expansion for 'iso' is  64.5%)
+  Solvent unit box:                     18.774 18.774 18.774
+The number of boxes:  x= 5  y= 5  z= 5
+  Volume: 411975.780 A^3 (oct)
+  Total mass 221547.532 amu,  Density 0.893 g/cc
+  Added 10529 residues.
+> 
+> addions complex K+ 12
+Adding 12 counter ions to "complex" using 1A grid
+Total solute charge:  -0.00  Max atom radius:   2.00
+Grid extends from solute vdw + 4.01  to  10.01
+Box:
+   enclosing:  -40.56 -35.97 -34.37   36.22 40.17 35.93
+   sized:			      87.44 92.03 93.63
+   edge:        128.00
+Resolution:      1.00 Angstrom.
+Tree depth: 7
+Volume =  3.24% of box, grid points 67873
+Solvent present: replacing closest with ion
+	 when steric overlaps occur
+Calculating grid charges
+(Replacing solvent molecule)
+Placed K+ in complex at (-9.31, -24.20, 10.35).
+(Replacing solvent molecule)
+Placed K+ in complex at (15.02, 9.85, -4.71).
+(Replacing solvent molecule)
+Placed K+ in complex at (2.27, -8.58, 19.90).
+(Replacing solvent molecule)
+Placed K+ in complex at (-2.33, 13.89, 28.06).
+(Replacing solvent molecule)
+Placed K+ in complex at (-18.98, -12.69, -7.10).
+(Replacing solvent molecule)
+Placed K+ in complex at (-21.86, 17.95, 16.98).
+(Replacing solvent molecule)
+Placed K+ in complex at (3.54, -27.53, -4.37).
+(Replacing solvent molecule)
+Placed K+ in complex at (-13.23, 6.92, -8.51).
+(Replacing solvent molecule)
+Placed K+ in complex at (-12.19, -22.22, -17.24).
+(Replacing solvent molecule)
+Placed K+ in complex at (21.50, 10.28, 3.71).
+(Replacing solvent molecule)
+Placed K+ in complex at (13.56, -8.36, -27.90).
+(Replacing solvent molecule)
+Placed K+ in complex at (-30.16, -3.00, 20.47).
+
+Done adding ions.
+> addions complex Cl- 12
+Adding 12 counter ions to "complex" using 1A grid
+Total solute charge:  12.00  Max atom radius:   2.00
+Grid extends from solute vdw + 5.91  to  11.91
+Box:
+   enclosing:  -42.46 -39.44 -39.81   38.12 42.07 39.97
+   sized:			      85.54 88.56 88.19
+   edge:        128.00
+Resolution:      1.00 Angstrom.
+Tree depth: 7
+Volume =  3.70% of box, grid points 77580
+Solvent present: replacing closest with ion
+	 when steric overlaps occur
+Calculating grid charges
+(Replacing solvent molecule)
+Placed Cl- in complex at (19.60, -0.74, 13.83).
+(Replacing solvent molecule)
+Placed Cl- in complex at (-9.83, 11.80, -13.53).
+(Replacing solvent molecule)
+Placed Cl- in complex at (29.81, -6.24, -6.72).
+(Replacing solvent molecule)
+Placed Cl- in complex at (-10.52, 31.68, 7.42).
+(Replacing solvent molecule)
+Placed Cl- in complex at (-6.41, -8.52, 29.57).
+(Replacing solvent molecule)
+Placed Cl- in complex at (9.49, -14.56, -30.52).
+(Replacing solvent molecule)
+Placed Cl- in complex at (-16.22, -25.32, 13.75).
+(Replacing solvent molecule)
+Placed Cl- in complex at (18.78, 16.22, -3.51).
+(Replacing solvent molecule)
+Placed Cl- in complex at (-31.72, 3.16, 22.12).
+(Replacing solvent molecule)
+Placed Cl- in complex at (-23.49, -18.38, -6.12).
+(Replacing solvent molecule)
+Placed Cl- in complex at (-37.43, 9.03, -2.19).
+(Replacing solvent molecule)
+Placed Cl- in complex at (7.26, -28.78, -10.45).
+
+Done adding ions.
+> 
+> saveamberparm complex prepin.prmtop prepin.inpcrd
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 848 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	BRL	1
+	CTYR	1
+	NGLN	1
+	WAT	10505
+  )
+ (no restraints)
+> savepdb complex prepin.pdb
+Writing pdb file: prepin.pdb
+   printing CRYST1 record to PDB file with box info
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Warning!
+ Converting N-terminal residue name to PDB format: NGLN -> GLN
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/MPI/gcc12/openmpi4/ambertools/25.0/bin/teLeap: Warning!
+ Converting C-terminal residue name to PDB format: CTYR -> TYR
+> 
+> quit
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 9; Notes = 1.

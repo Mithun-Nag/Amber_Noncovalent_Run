@@ -1,0 +1,23 @@
+
+ REMIND COMPUTATIONAL CONDITIONS FOR P7173:
+ Geometry optimization done using the 'ON' keyword
+ MEP computation done
+ Frequency computation not done!
+ QMSOFT       = GAUSSIAN using the 'Normal' mode
+ CHR_TYP      = RESP-A1
+ Theory level = HF/6-31G(d)//HF/6-31G(d)
+ (Single point MEP computation//Geometry optimization)
+ Surface algo = Connolly surface
+ MEP points   = Default
+
+ Compare 'QM' versus 'RESP' dipole moments (based on MEP computation versus RESP fit) in the 'P7173' job...
+
+ Molecule 1                               Total charge = 0 0
+ Mol = molecule, conf = conformation, ornt = orientation; ooc = origin of coordinates; dipole moment unit = Debye (D)
+ Mol       Conf       Ornt       QM-ESP vs RESP mep pts    QM_dipole  QM-ESP_dipole    RESP_dipole(ooc)    Diff(QM-RESP_ooc)  Diff(QM_ESP-RESP_ooc) 
+ Mol   1 - conf   1 - ornt   1     1900    1900             2.6901         2.7004         2.7521              -0.0620            -0.0517 
+ Mol   1 - conf   1 - ornt   2     1886    1886             2.6901         2.6988         2.7521              -0.0620            -0.0533 
+
+ Remark: QM_dipole and QM-ESP_dipole values are reported for a single QM output file (i.e. for a single orientation/conformation),
+         while RESP_dipole(ooc) values are generally based on charge values derived using multiple orientations and/or conformations.
+

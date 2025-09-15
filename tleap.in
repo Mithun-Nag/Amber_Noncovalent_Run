@@ -1,0 +1,27 @@
+#!/bin/bash
+# load script using: tleap -s -f tleap.in
+
+source leaprc.protein.ff14SB
+source leaprc.gaff
+source leaprc.water.tip3p
+
+loadamberparams ligand_prep/BRL.frcmod
+BRL = loadmol3 RED_server_P7173/Data-R.E.D.Server/Mol_m1/Mol-sm_m1-c1.mol2 
+complex = loadPdb 6ONJ_BRL_complex.pdb
+
+check complex
+charge complex
+
+addions complex Na+ 0
+addions complex Cl- 0
+
+solvateoct complex TIP3PBOX 10.0 iso
+
+addions complex K+ 12
+addions complex Cl- 12
+
+saveamberparm complex prepin.prmtop prepin.inpcrd
+savepdb complex prepin.pdb
+
+quit
+

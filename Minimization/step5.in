@@ -1,0 +1,8 @@
+Min explicit solvent no heavy atom res no shake
+&cntrl
+  imin = 1, ntmin = 2, maxcyc = 2000,
+  ntwx = 1000, ioutfm = 1, ntpr = 50, ntwr = 500,
+  ntc = 1, ntf = 1, ntb = 1, cut = 8.0,
+  igb = 0, saltcon = 0.0,
+  ntr = 0,
+&end

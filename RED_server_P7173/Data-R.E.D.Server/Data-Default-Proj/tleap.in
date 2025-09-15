@@ -1,0 +1,25 @@
+#!/bin/bash
+# load script using: tleap -s -f tleap.in
+
+source leaprc.protein.ff14SB
+source leaprc.q4mdfft
+source leaprc.gaff
+source leaprc.water.tip3p
+
+complex = loadPdb Complex_clean_H.pdb
+
+check complex
+charge complex
+
+addions complex Na+ 0
+addions complex Cl- 0
+
+solvateoct complex TIP3PBOX 10.0 iso
+
+# addions complex K+ 11
+# addions complex Cl- 11
+
+saveamberparm complex prepin.prmtop prepin.inpcrd
+savepdb complex prepin.pdb
+
+quit
